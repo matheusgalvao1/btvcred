@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   const MyButton({
-    required this.onTap,
+    this.onTap,
     //this.color,
   });
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomSafe extends StatelessWidget {
-  const CustomSafe({required this.child});
+  const CustomSafe({@required this.child});
 
   final Widget child;
 

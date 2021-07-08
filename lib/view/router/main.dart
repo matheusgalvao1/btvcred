@@ -11,19 +11,19 @@ class Router extends StatelessWidget {
     return Consumer<BlocRouter>(
         builder: (BuildContext context, BlocRouter bloc) {
       return Material(
-        // color: Theme.of(context).colorScheme.onSecondary,
-        // child: SplashScreen.callback(
-        //   name: 'lib/assets/animation/intro.flr',
-        //   onSuccess: (dynamic e) {
-        //     OneContext().pushNamedAndRemoveUntil(
-        //       bloc.navigator,
-        //       (_) => false,
-        //     );
-        //   },
-        //   onError: (dynamic error, dynamic stacktrace) {},
-        //   until: () => bloc.init(),
-        //   startAnimation: 'splash',
-        // ),
+        color: Theme.of(context).colorScheme.onSecondary,
+        child: SplashScreen.callback(
+          name: 'lib/assets/animations/btv.flr',
+          onSuccess: (dynamic e) {
+            OneContext().pushNamedAndRemoveUntil(
+              bloc.navigator,
+              (_) => false,
+            );
+          },
+          onError: (dynamic error, dynamic stacktrace) {},
+          //until: () => bloc.init(),
+          startAnimation: 'btv',
+        ),
       );
     });
   }
