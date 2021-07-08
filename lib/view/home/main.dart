@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
           ),
           SizedBox(height: 30),
           CupertinoButton.filled(
-            child: Text('Opção 1'),
+            child: Text(' 1'),
             onPressed: () {},
           ),
         ],
