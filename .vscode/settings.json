@@ -34,7 +34,17 @@
         "**/.packages": true,
         ".packages": true,
         "**/.gitignore": true,
-        ".gitignore": true
+        ".gitignore": true,
+        "**/.flutter-plugins-dependencies": true,
+        ".flutter-plugins-dependencies": true,
+        "**/.flutter-plugins": true,
+        ".flutter-plugins": true,
+        "lib/generated_plugin_registrant.dart": true,
+        "**/generated_plugin_registrant.dart": true,
+        "lib/*.dart": true,
+        "lib/*.*": true,
+        "generated_plugin_registrant.dart": true,
+        "**/*.dart": true
     },
     "explorerExclude.backup": null
 }
