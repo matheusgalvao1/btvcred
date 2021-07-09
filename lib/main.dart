@@ -5,6 +5,7 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 
 import 'bloc/router.dart';
 import 'bloc/Simulator.dart';
+import 'utility/CustomTheme.dart';
 import 'view/home/main.dart';
 import 'view/router/Routes.dart';
 import 'view/router/main.dart';
@@ -24,11 +25,10 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       child: MaterialApp(
         title: 'App Btv',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: Router(),
+        home: Home(),
         routes: Routes.get(),
+        darkTheme: CustomTheme.dark,
+        theme: CustomTheme.light,
       ),
       blocs: <Bloc<dynamic>>[
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),

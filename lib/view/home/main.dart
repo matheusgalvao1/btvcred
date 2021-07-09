@@ -1,8 +1,11 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:btvcred/components/Button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../bloc/Simulator.dart';
+
+part 'Type.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -13,7 +16,9 @@ class Home extends StatelessWidget {
           body: PageView(
             controller: bloc.pageController,
             physics: NeverScrollableScrollPhysics(),
-            children: [],
+            children: [
+              Type(),
+            ],
           ),
         );
       },
