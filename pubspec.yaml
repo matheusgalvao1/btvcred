@@ -14,10 +14,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   bloc_pattern: ^3.0.0
   community_material_icon: ^5.9.55
+  firebase_remote_config: ^0.6.0
   flare_splash_screen: ^3.0.1
+  flushbar: ^1.10.4
   flutter_svg: ^0.21.0+1
   one_context: ^1.1.0
   page_transition: ^1.1.7+6
+  path_provider: ^2.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,10 +1,13 @@
-import 'package:bloc_pattern/bloc_pattern.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'  hide Router;
 import 'package:flutter/services.dart';
+
+import 'package:bloc_pattern/bloc_pattern.dart';
 
 import 'bloc/router.dart';
 import 'bloc/Simulator.dart';
 import 'view/home/main.dart';
+import 'view/router/Routes.dart';
+import 'view/router/main.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +27,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Home(),
+        home: Router(),
+        routes: Routes.get(),
       ),
       blocs: <Bloc<dynamic>>[
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
