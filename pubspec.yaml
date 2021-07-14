@@ -17,6 +17,7 @@ dependencies:
   firebase_remote_config: ^0.6.0
   flare_splash_screen: ^3.0.1
   flushbar: ^1.10.4
+  flutter_launcher_icons: ^0.9.0
   flutter_svg: ^0.21.0+1
   google_fonts: ^1.1.0
   one_context: ^1.1.0
@@ -33,3 +34,8 @@ flutter:
   - lib/assets/
   - lib/assets/animations/
   - lib/assets/images/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'lib/assets/logo/logo.png'
