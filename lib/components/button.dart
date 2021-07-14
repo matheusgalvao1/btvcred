@@ -11,8 +11,9 @@ class MyButton extends StatelessWidget {
     return InkWell(
       onTap: () => onTap,
       child: Container(
-        height: 70,
-        width: 200,
+        constraints: BoxConstraints(minHeight: 70),
+        padding: EdgeInsets.all(5),
+        width: MediaQuery.of(context).size.width*.5,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           color: Theme.of(context).colorScheme.primary,
@@ -21,6 +22,7 @@ class MyButton extends StatelessWidget {
             child: text != null
                 ? Text(
                     text,
+                    textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.headline1.copyWith(
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).accentColor,

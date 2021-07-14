@@ -12,6 +12,8 @@ class Type extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             MyButton(text: 'INSS'),
+            SizedBox(height: 20),
+            MyButton(text: 'Funcionário Público'),
           ],
         ),
       ),
