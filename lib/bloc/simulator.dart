@@ -7,10 +7,37 @@ import '../../model/User.dart';
 class BlocSimulator extends BlocBase {
   PageController pageController = PageController();
 
+  int cPage = 0;
+
   ModelUser user = ModelUser();
 
   void clear() {
     //
+  }
+
+  void nextPage() {
+    if (cPage < 2) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.fastOutSlowIn,
+      );
+      cPage++;
+    } else {
+      cPage = 0;
+      pageController.jumpTo(0);
+      notifyListeners();
+    }
+    notifyListeners();
+  }
+
+  void previousPage() {
+    if (cPage > 0) {
+      pageController.previousPage(
+        duration: const Duration(milliseconds: 700),
+        curve: Curves.fastOutSlowIn,
+      );
+      cPage--;
+    }
   }
 
   void setAmount(double value) {
