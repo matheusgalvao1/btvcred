@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 
 import '../../bloc/Simulator.dart';
 
+part 'Amount.dart';
+part 'Months.dart';
 part 'Type.dart';
 
 class Home extends StatelessWidget {

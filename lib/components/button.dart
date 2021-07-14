@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({
-    this.onTap,
-    //this.color,
-  });
+  const MyButton({this.onTap, this.text});
 
   final Function onTap;
-  //final Color color;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +17,16 @@ class MyButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           color: Theme.of(context).colorScheme.primary,
         ),
+        child: Center(
+            child: text != null
+                ? Text(
+                    text,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontWeight: FontWeight.w600,
+                          color: Theme.of(context).accentColor,
+                        ),
+                  )
+                : null),
       ),
     );
   }

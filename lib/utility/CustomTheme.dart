@@ -37,7 +37,7 @@ class CustomTheme {
     splashColor: Colors.transparent,
     textSelectionColor: Colored.backGroundLight.withOpacity(0.2),
     textSelectionHandleColor: Colored.group01Medium,
-    textTheme: GoogleFonts.firaCodeTextTheme(
+    textTheme: GoogleFonts.openSansTextTheme(
       const TextTheme(
         headline1: Styled.headline1Dark,
         headline2: Styled.headline2Dark,
@@ -87,7 +87,7 @@ class CustomTheme {
     splashColor: Colors.transparent,
     textSelectionColor: Colored.backGroundLight,
     textSelectionHandleColor: Colored.group01Medium,
-    textTheme: GoogleFonts.firaCodeTextTheme(
+    textTheme: GoogleFonts.openSansTextTheme(
       const TextTheme(
         headline1: Styled.headline1Light,
         headline2: Styled.headline2Light,
@@ -110,6 +110,7 @@ class CustomTheme {
 class _ColorScheme {
   static ColorScheme get dark => _colorScheme(Brightness.dark);
   static ColorScheme get light => _colorScheme(Brightness.light);
+  
 
   static ColorScheme _colorScheme(Brightness brightness) => ColorScheme(
         brightness: brightness,
