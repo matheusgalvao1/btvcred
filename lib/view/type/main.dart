@@ -1,4 +1,6 @@
-part of 'main.dart';
+import 'package:flutter/material.dart';
+
+import '../../components/Button.dart';
 
 class Type extends StatelessWidget {
   @override

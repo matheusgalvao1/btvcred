@@ -1,16 +1,15 @@
-import 'package:bloc_pattern/bloc_pattern.dart';
-import 'package:btvcred/components/Button.dart';
-import 'package:btvcred/view/home/Indicator.dart';
-import 'package:btvcred/utility/Pointer.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+
+import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../../bloc/Simulator.dart';
+import '../../utility/Pointer.dart';
+import '../../view/home/Indicator.dart';
+import '../amount/main.dart';
+import '../months/main.dart';
+import '../type/main.dart';
 
-part 'Amount.dart';
 part 'AppBar.dart';
-part 'Months.dart';
-part 'Type.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -32,8 +31,8 @@ class Home extends StatelessWidget {
             physics: NeverScrollableScrollPhysics(),
             children: [
               Type(),
+              Amount(bloc),
               Months(),
-              Amount(),
             ],
           ),
         );

@@ -1,4 +1,4 @@
-part of 'main.dart';
+import 'package:flutter/material.dart';
 
 class Months extends StatelessWidget {
 
@@ -7,7 +7,7 @@ class Months extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          blocSimulator.cPage.toString(),
+          'teste',
           style: Theme.of(context).textTheme.headline1.copyWith(color: Colors.blue),
         ),
       ),
