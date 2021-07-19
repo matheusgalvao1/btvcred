@@ -25,7 +25,6 @@ class MyButton extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.headline1.copyWith(
                           fontWeight: FontWeight.w600,
-                          color: Theme.of(context).accentColor,
                         ),
                   )
                 : null),

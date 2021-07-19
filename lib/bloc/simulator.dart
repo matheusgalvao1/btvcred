@@ -16,7 +16,7 @@ class BlocSimulator extends BlocBase {
   }
 
   void nextPage() {
-    if (cPage < 2) {
+    if (cPage < 3) {
       pageController.nextPage(
         duration: const Duration(milliseconds: 600),
         curve: Curves.fastOutSlowIn,

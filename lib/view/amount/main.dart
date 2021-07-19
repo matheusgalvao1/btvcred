@@ -15,16 +15,15 @@ class Amount extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ListView(
+          padding: EdgeInsets.all(30),
           shrinkWrap: true,
           children: [
-            Center(
-              child: Text(
-                'Valor do empréstimo',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline1
-                    .copyWith(fontWeight: FontWeight.w600),
-              ),
+            Text(
+              'Valor do empréstimo',
+              style: Theme.of(context)
+                  .textTheme
+                  .headline1
+                  .copyWith(fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 15),
             InputAmount(),

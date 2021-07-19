@@ -1,5 +1,6 @@
-import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+
+import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../../bloc/Simulator.dart';
 
@@ -18,16 +19,13 @@ class Indicator extends StatelessWidget {
                   height: 20,
                   width: _width,
                   decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(.3),
                     borderRadius: BorderRadius.circular(50),
-                    border: Border.all(
-                      color: Colors.blue,
-                      width: 3,
-                    ),
                   ),
                 ),
                 Container(
                   height: 20,
-                  width: (_width / 3) * (bloc.cPage + 1),
+                  width: (_width / 4) * (bloc.cPage + 1),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
                     color: Theme.of(context).colorScheme.primary,

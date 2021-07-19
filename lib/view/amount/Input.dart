@@ -4,18 +4,16 @@ class InputAmount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30),
       child: TextField(
         autofocus: false,
+        cursorRadius: Radius.circular(100),
+        keyboardType: TextInputType.number,
+        style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 50),
         decoration: InputDecoration(
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.blue, width: 2.0),
-            borderRadius: BorderRadius.circular(10),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
           ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.blue, width: 2.0),
-            borderRadius: BorderRadius.circular(10),
-          ),
+          disabledBorder: OutlineInputBorder(),
         ),
       ),
     );

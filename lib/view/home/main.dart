@@ -7,7 +7,9 @@ import '../../utility/Pointer.dart';
 import '../../view/home/Indicator.dart';
 import '../amount/main.dart';
 import '../months/main.dart';
+import '../result/main.dart';
 import '../type/main.dart';
+
 
 part 'AppBar.dart';
 
@@ -26,13 +28,13 @@ class Home extends StatelessWidget {
             }
           ),
           body: PageView(
-
             controller: bloc.pageController,
             physics: NeverScrollableScrollPhysics(),
             children: [
               Type(),
               Amount(bloc),
               Months(),
+              Result(),
             ],
           ),
         );
