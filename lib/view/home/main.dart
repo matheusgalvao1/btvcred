@@ -32,14 +32,15 @@ class Home extends StatelessWidget {
                           .white, //Theme.of(context).colorScheme.onSecondary,
                     ),
                     onPressed: () {
-                      bloc.plus();
-                    })
+                      bloc.previousPage();
+                    },
+                  )
                 : null,
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
           body: PageView(
             controller: bloc.pageController,
-            physics: BouncingScrollPhysics(),//CustomScrollPhysics(),
+            scrollBehavior: CupertinoScrollBehavior(),
             children: [
               Type(),
               Amount(bloc),

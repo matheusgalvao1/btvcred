@@ -19,15 +19,6 @@ class BlocSimulator extends BlocBase {
     //
   }
 
-  void plus() {
-    if (percent < 1)
-      percent += 0.25;
-    else
-      percent = 0;
-    nextPage();
-    notifyListeners();
-  }
-
   void nextPage() {
     if (cPage < 3) {
       pageController.nextPage(
@@ -35,11 +26,13 @@ class BlocSimulator extends BlocBase {
         curve: Curves.fastOutSlowIn,
       );
       cPage++;
-    } else {
-      cPage = 0;
-      pageController.jumpTo(0);
+      nextPercentage();
       notifyListeners();
     }
+  }
+
+  void nextPercentage() {
+    if (percent < 1) percent += 0.25;
     notifyListeners();
   }
 
@@ -50,6 +43,14 @@ class BlocSimulator extends BlocBase {
         curve: Curves.fastOutSlowIn,
       );
       cPage--;
+      previousPercentage();
+    }
+  }
+
+  void previousPercentage() {
+    if (percent >= 0.25) {
+      percent -= 0.25;
+      notifyListeners();
     }
   }
 

@@ -40,18 +40,33 @@ class Modal {
                   text: 'Municipal',
                   height: 80,
                   width: 200,
+                  onTap: () {
+                    blocSimulator.setUserType('M');
+                    Navigator.pop(context);
+                    blocSimulator.nextPage();
+                  },
                 ),
                 SizedBox(height: 15),
                 ButtonOutlined(
                   text: 'Estadual',
                   height: 80,
                   width: 200,
+                  onTap: () {
+                    blocSimulator.setUserType('E');
+                    Navigator.pop(context);
+                    blocSimulator.nextPage();
+                  },
                 ),
                 SizedBox(height: 15),
                 ButtonOutlined(
                   text: 'Federal',
                   height: 80,
                   width: 200,
+                  onTap: () {
+                    blocSimulator.setUserType('F');
+                    Navigator.pop(context);
+                    blocSimulator.nextPage();
+                  },
                 ),
               ],
             ),
