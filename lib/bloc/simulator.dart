@@ -7,7 +7,10 @@ import '../../model/User.dart';
 class BlocSimulator extends BlocBase {
   PageController pageController = PageController();
 
-  int cPage = 0;
+  int
+      //
+      cPage = 0;
+
   double percent = 0;
 
   ModelUser user = ModelUser();
@@ -61,6 +64,7 @@ class BlocSimulator extends BlocBase {
     if (value != user.months) {
       user.months = value;
       notifyListeners();
+      print(user.months);
     }
   }
 

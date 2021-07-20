@@ -1,7 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:numberpicker/numberpicker.dart';
+
+import '../../components/Button.dart';
+import '../../utility/Pointer.dart';
+
 
 part 'Picker.dart';
 
@@ -9,10 +12,9 @@ class Months extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ListView(
-          padding: EdgeInsets.all(30),
-          shrinkWrap: true,
+      body: Padding(
+        padding: EdgeInsets.all(30),
+        child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -28,7 +30,7 @@ class Months extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 30),
             Picker(),
           ],
         ),
