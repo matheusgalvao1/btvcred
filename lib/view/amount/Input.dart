@@ -11,9 +11,16 @@ class InputAmount extends StatelessWidget {
         style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 50),
         decoration: InputDecoration(
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(15),
+              borderSide: BorderSide(
+                color: Colors.white,
+              )),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Theme.of(context).colorScheme.primary,
+            ),
+            borderRadius: BorderRadius.circular(20),
           ),
-          disabledBorder: OutlineInputBorder(),
         ),
       ),
     );

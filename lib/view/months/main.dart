@@ -5,7 +5,6 @@ import 'package:numberpicker/numberpicker.dart';
 import '../../components/Button.dart';
 import '../../utility/Pointer.dart';
 
-
 part 'Picker.dart';
 
 class Months extends StatelessWidget {
@@ -22,10 +21,10 @@ class Months extends StatelessWidget {
                 Expanded(
                   child: Text(
                     'Quantas parcelas?',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1
-                        .copyWith(fontWeight: FontWeight.w600),
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 25,
+                        ),
                   ),
                 ),
               ],

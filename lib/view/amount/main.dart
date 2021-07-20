@@ -1,3 +1,4 @@
+import 'package:btvcred/components/Button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,22 +14,34 @@ class Amount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ListView(
-          padding: EdgeInsets.all(30),
-          shrinkWrap: true,
-          children: [
-            Text(
-              'Valor do empréstimo',
-              style: Theme.of(context)
-                  .textTheme
-                  .headline1
-                  .copyWith(fontWeight: FontWeight.w600),
-            ),
-            SizedBox(height: 15),
-            InputAmount(),
-          ],
+      body: ListView(
+        padding: EdgeInsets.only(
+          top: MediaQuery.of(context).size.height * .25,
+          left: 30,
+          right: 30,
         ),
+        shrinkWrap: true,
+        children: [
+          Text(
+            'Valor do empréstimo',
+            style: Theme.of(context)
+                .textTheme
+                .headline1
+                .copyWith(fontWeight: FontWeight.w600),
+          ),
+          SizedBox(height: 15),
+          InputAmount(),
+          SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              MyButton(
+                text: "Continuar",
+                width: 150,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
