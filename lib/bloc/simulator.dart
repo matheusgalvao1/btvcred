@@ -8,11 +8,21 @@ class BlocSimulator extends BlocBase {
   PageController pageController = PageController();
 
   int cPage = 0;
+  double percent = 0;
+
 
   ModelUser user = ModelUser();
 
   void clear() {
     //
+  }
+
+  void plus() {
+    if(percent < 1)
+      percent += 0.25;
+    else
+      percent = 0;
+    notifyListeners();
   }
 
   void nextPage() {

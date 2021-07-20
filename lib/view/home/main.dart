@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
             backgroundColor: Colors.orange,
             child: Icon(Icons.skip_next),
             onPressed: () {
-              bloc.nextPage();
+              bloc.plus();
             }
           ),
           body: PageView(
