@@ -10,14 +10,17 @@ import '../../utility/Pointer.dart';
 part 'Modal.dart';
 
 class Type extends StatelessWidget {
+  final BlocSimulator bloc;
+
+  const Type(this.bloc);
+
   @override
   Widget build(BuildContext context) {
-    return Consumer<BlocSimulator>(
-        builder: (BuildContext context, BlocSimulator bloc) {
       return Scaffold(
         body: Padding(
           padding: EdgeInsets.all(30),
           child: ListView(
+            physics: BouncingScrollPhysics(),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -64,6 +67,5 @@ class Type extends StatelessWidget {
           ),
         ),
       );
-    });
   }
 }

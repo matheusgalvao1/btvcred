@@ -40,9 +40,10 @@ class Home extends StatelessWidget {
           floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
           body: PageView(
             controller: bloc.pageController,
+            physics: NeverScrollableScrollPhysics(),
             scrollBehavior: CupertinoScrollBehavior(),
             children: [
-              Type(),
+              Type(bloc),
               Amount(bloc),
               Months(),
               Result(),

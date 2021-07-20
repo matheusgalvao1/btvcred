@@ -28,6 +28,7 @@ class Modal {
                   'Tipo de Funcionário',
                   style: Theme.of(context).textTheme.headline1.copyWith(
                         fontWeight: FontWeight.w600,
+                        color: Colors.white,
                       ),
                 ),
                 SizedBox(height: 10),

@@ -15,6 +15,7 @@ class Amount extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
           top: MediaQuery.of(context).size.height * .25,
           left: 30,
@@ -38,6 +39,10 @@ class Amount extends StatelessWidget {
               MyButton(
                 text: "Continuar",
                 width: 150,
+                onTap: () {
+                  //
+                  bloc.nextPage();
+                },
               ),
             ],
           ),

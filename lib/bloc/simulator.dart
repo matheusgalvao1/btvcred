@@ -11,7 +11,7 @@ class BlocSimulator extends BlocBase {
       //
       cPage = 0;
 
-  double percent = 0;
+  double percent = 0.25;
 
   ModelUser user = ModelUser();
 
