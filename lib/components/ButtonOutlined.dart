@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MyButton extends StatelessWidget {
-  const MyButton({
+class ButtonOutlined extends StatelessWidget {
+  const ButtonOutlined({
     this.onTap,
     this.text,
     this.width,
@@ -24,7 +24,10 @@ class MyButton extends StatelessWidget {
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          color: Theme.of(context).colorScheme.primary,
+          border: Border.all(
+            color: Theme.of(context).colorScheme.primary,
+            width: 3,
+          ),
         ),
         child: Center(
             child: text != null

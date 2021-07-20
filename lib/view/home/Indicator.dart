@@ -18,7 +18,7 @@ class Indicator extends StatelessWidget {
             animation: true,
             animateFromLastPercent: true,
             lineHeight: 15,
-            animationDuration: 800,
+            animationDuration: 500,
             percent: bloc.percent,
             progressColor: Theme.of(context).colorScheme.primary,
             linearStrokeCap: LinearStrokeCap.roundAll,
