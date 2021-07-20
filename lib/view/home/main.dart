@@ -1,15 +1,15 @@
+import 'package:btvcred/utility/CustomScrollable.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../../bloc/Simulator.dart';
-import '../../utility/Pointer.dart';
 import '../../view/home/Indicator.dart';
 import '../amount/main.dart';
 import '../months/main.dart';
 import '../result/main.dart';
 import '../type/main.dart';
-
 
 part 'AppBar.dart';
 
@@ -20,16 +20,26 @@ class Home extends StatelessWidget {
       builder: (BuildContext context, BlocSimulator bloc) {
         return Scaffold(
           appBar: AppBarSimulator(bloc),
-          floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.orange,
-            child: Icon(Icons.skip_next),
-            onPressed: () {
-              bloc.plus();
-            }
+          floatingActionButton: Padding(
+            padding: const EdgeInsets.only(bottom: 50),
+            child: bloc.cPage > 0
+                ? FloatingActionButton(
+                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    child: Icon(
+                      Icons.arrow_back,
+                      size: 35,
+                      color: Colors
+                          .white, //Theme.of(context).colorScheme.onSecondary,
+                    ),
+                    onPressed: () {
+                      bloc.plus();
+                    })
+                : null,
           ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
           body: PageView(
             controller: bloc.pageController,
-            physics: NeverScrollableScrollPhysics(),
+            physics: BouncingScrollPhysics(),//CustomScrollPhysics(),
             children: [
               Type(),
               Amount(bloc),
