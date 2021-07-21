@@ -1,56 +1,59 @@
-import 'package:btvcred/utility/CustomScrollable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:bloc_pattern/bloc_pattern.dart';
-
-import '../../bloc/Simulator.dart';
-import '../../view/home/Indicator.dart';
-import '../amount/main.dart';
-import '../months/main.dart';
-import '../result/main.dart';
-import '../type/main.dart';
-
-part 'AppBar.dart';
+import '../../components/Button.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Consumer<BlocSimulator>(
-      builder: (BuildContext context, BlocSimulator bloc) {
-        return Scaffold(
-          appBar: AppBarSimulator(bloc),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.only(bottom: 50),
-            child: bloc.cPage > 0
-                ? FloatingActionButton(
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    child: Icon(
-                      Icons.arrow_back,
-                      size: 35,
-                      color: Colors
-                          .white, //Theme.of(context).colorScheme.onSecondary,
-                    ),
-                    onPressed: () {
-                      bloc.previousPage();
-                    },
-                  )
-                : null,
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          IconButton(
+            padding: EdgeInsets.only(right: 10),
+            onPressed: () {},
+            icon: Icon(
+              Icons.settings,
+              size: 35,
+              color: Theme.of(context).colorScheme.primary,
+            ),
           ),
-          floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-          body: PageView(
-            controller: bloc.pageController,
-            physics: NeverScrollableScrollPhysics(),
-            scrollBehavior: CupertinoScrollBehavior(),
+        ],
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(30),
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Type(bloc),
-              Amount(bloc),
-              Months(),
-              Result(),
+              Expanded(
+                child: Text(
+                  'O que você gostaria de fazer?',
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 25,
+                      ),
+                ),
+              ),
             ],
           ),
-        );
-      },
+          SizedBox(height: MediaQuery.of(context).size.height * .2),
+          MyButton(
+            text: 'Simulação Empréstimo Consignado',
+            width: 150,
+            height: 80,
+            onTap: () => Navigator.pushNamed(context, '/simulator'),
+          ),
+          SizedBox(height: 20),
+          MyButton(
+            text: 'Simulação Saque FGTS',
+            width: 150,
+            height: 80,
+            onTap: () {},
+          ),
+        ],
+      ),
     );
   }
 }

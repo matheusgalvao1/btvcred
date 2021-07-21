@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:one_context/one_context.dart';
 
 import '../../model/User.dart';
 
@@ -36,14 +37,17 @@ class BlocSimulator extends BlocBase {
     notifyListeners();
   }
 
-  void previousPage() {
+  void previousPage(BuildContext context) {
     if (cPage > 0) {
+      cPage--;
       pageController.previousPage(
         duration: const Duration(milliseconds: 700),
         curve: Curves.fastOutSlowIn,
       );
-      cPage--;
+      notifyListeners();
       previousPercentage();
+    } else {
+      Navigator.pop(context);
     }
   }
 
@@ -65,7 +69,6 @@ class BlocSimulator extends BlocBase {
     if (value != user.months) {
       user.months = value;
       notifyListeners();
-      print(user.months);
     }
   }
 

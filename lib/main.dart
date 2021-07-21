@@ -7,8 +7,9 @@ import 'bloc/router.dart';
 import 'bloc/Simulator.dart';
 import 'utility/CustomTheme.dart';
 import 'view/home/main.dart';
-import 'view/router/Routes.dart';
 import 'view/router/main.dart';
+import 'view/router/Routes.dart';
+import 'view/simulator/main.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

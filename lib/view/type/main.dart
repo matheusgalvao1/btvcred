@@ -27,7 +27,7 @@ class Type extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      'Nos fale sobre você',
+                      'Em qual opção você se encaixa?',
                       style: Theme.of(context).textTheme.headline1.copyWith(
                             fontWeight: FontWeight.w600,
                             fontSize: 25,
