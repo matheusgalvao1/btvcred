@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../../bloc/Simulator.dart';
+import '../../utility/Pointer.dart';
 import '../amount/main.dart';
 import '../months/main.dart';
 import '../result/main.dart';
@@ -12,6 +13,7 @@ import '../type/main.dart';
 
 import 'Indicator.dart';
 part 'AppBar.dart';
+part 'Fab.dart';
 
 class Simulator extends StatelessWidget {
   @override
@@ -20,21 +22,7 @@ class Simulator extends StatelessWidget {
       builder: (BuildContext context, BlocSimulator bloc) {
         return Scaffold(
           appBar: AppBarSimulator(bloc),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.only(bottom: 50),
-            child: FloatingActionButton(
-              backgroundColor: Theme.of(context).colorScheme.primary,
-              child: Icon(
-                Icons.arrow_back,
-                size: 35,
-                color:
-                    Colors.white, //Theme.of(context).colorScheme.onSecondary,
-              ),
-              onPressed: () {
-                bloc.previousPage(context);
-              },
-            ),
-          ),
+          floatingActionButton: Fab(),
           floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
           body: PageView(
             controller: bloc.pageController,

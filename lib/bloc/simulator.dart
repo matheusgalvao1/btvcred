@@ -37,15 +37,15 @@ class BlocSimulator extends BlocBase {
     notifyListeners();
   }
 
-  void previousPage(BuildContext context) {
+  void previousPage(BuildContext context) async {
     if (cPage > 0) {
-      cPage--;
-      pageController.previousPage(
+      previousPercentage();
+      await pageController.previousPage(
         duration: const Duration(milliseconds: 700),
         curve: Curves.fastOutSlowIn,
       );
+      cPage--;
       notifyListeners();
-      previousPercentage();
     } else {
       Navigator.pop(context);
     }
