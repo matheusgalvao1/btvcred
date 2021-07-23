@@ -1,7 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:one_context/one_context.dart';
 
+import 'package:community_material_icon/community_material_icon.dart';
 
+import '../../components/ButtonIcon.dart';
+
+part 'Contact.dart';
 part 'MoreData.dart';
 
 class Result extends StatelessWidget {
@@ -26,7 +30,7 @@ class Result extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * .10),
+          SizedBox(height: 50),
           Row(
             children: [
               Expanded(
@@ -58,7 +62,7 @@ class Result extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () => MoreData()._showMyDialog(context),
-                borderRadius: BorderRadius.circular(20),            
+                borderRadius: BorderRadius.circular(20),
                 child: Container(
                   padding: EdgeInsets.all(20),
                   child: Center(
@@ -76,6 +80,8 @@ class Result extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 30),
+          Contact(),
         ],
       ),
     );

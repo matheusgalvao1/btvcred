@@ -7,10 +7,15 @@ class MoreData {
       builder: (BuildContext context) {
         return AlertDialog(
           contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          backgroundColor: Theme.of(context).colorScheme.background,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(20),
+              Radius.circular(15),
             ),
+            side: BorderSide(
+              color: Theme.of(context).colorScheme.primary,
+              width: 2,
+            )
           ),
           content: Container(
             height: 200,
@@ -90,25 +95,19 @@ class MoreData {
                   ),
                 ),
                 SizedBox(height: 10),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Valor final com juros: ',
-                        style: Theme.of(context)
-                            .textTheme
-                            .headline3
-                            .copyWith(fontWeight: FontWeight.w600),
+                Text(
+                  'Valor final com juros: ',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3
+                      .copyWith(fontWeight: FontWeight.w600),
+                ),
+                Text(
+                  'R\$ 150000,00',
+                  style: Theme.of(context).textTheme.headline3.copyWith(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.w600,
                       ),
-                      TextSpan(
-                        text: 'R\$ 150000,00',
-                        style: Theme.of(context).textTheme.headline3.copyWith(
-                              color: Theme.of(context).colorScheme.primary,
-                              fontWeight: FontWeight.w600,
-                            ),
-                      ),
-                    ],
-                  ),
                 ),
               ],
             ),

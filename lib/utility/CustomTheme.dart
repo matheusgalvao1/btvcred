@@ -108,11 +108,11 @@ class CustomTheme {
 
 // ignore: avoid_classes_with_only_static_members
 class _ColorScheme {
-  static ColorScheme get dark => _colorScheme(Brightness.dark);
-  static ColorScheme get light => _colorScheme(Brightness.light);
+  static ColorScheme get dark => _colorScheme(Brightness.dark, Colored.group02Dark);
+  static ColorScheme get light => _colorScheme(Brightness.light, Colored.backGroundLight);
   
 
-  static ColorScheme _colorScheme(Brightness brightness) => ColorScheme(
+  static ColorScheme _colorScheme(Brightness brightness, Color background) => ColorScheme(
         brightness: brightness,
         // GROUP01
         primary: Colored.group01Light,
@@ -123,7 +123,7 @@ class _ColorScheme {
         secondaryVariant: Colored.group02Medium,
         onSecondary: Colored.group02Dark,
         // GROUP03
-        background: Colored.group03Light,
+        background: background,
         error: Colored.group03Medium,
         onBackground: Colored.group03Dark,
         // GROUP04

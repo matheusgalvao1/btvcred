@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ButtonOutlined extends StatelessWidget {
-  const ButtonOutlined({
+class ButtonWithIcon extends StatelessWidget {
+  const ButtonWithIcon({
+    this.height,
+    this.icon,
     this.onTap,
     this.text,
     this.width,
-    this.height,
   });
 
   final Function onTap;
+  final IconData icon;
   final String text;
-
   final double width, height;
 
   @override
@@ -29,16 +30,21 @@ class ButtonOutlined extends StatelessWidget {
             width: 3,
           ),
         ),
-        child: Center(
-            child: text != null
-                ? Text(
-                    text,
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.headline1.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
-                  )
-                : null),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              text,
+              style: Theme.of(context).textTheme.headline1.copyWith(
+                    fontWeight: FontWeight.w600,
+                  ),
+            ),
+            Icon(
+              icon,
+              size: 50,
+            ),
+          ],
+        ),
       ),
     );
   }

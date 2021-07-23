@@ -16,7 +16,7 @@ class Modal {
           return Container(
             height: 370,
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.onSecondary,
+              color: Theme.of(context).colorScheme.background,
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
               ),
@@ -28,7 +28,6 @@ class Modal {
                   'Tipo de Funcionário',
                   style: Theme.of(context).textTheme.headline1.copyWith(
                         fontWeight: FontWeight.w600,
-                        color: Colors.white,
                       ),
                 ),
                 SizedBox(height: 10),
