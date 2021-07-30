@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
 
-import '../../model/User.dart';
+import '../../model/Simulation.dart';
 
 class BlocSimulator extends BlocBase {
   PageController pageController = PageController();
@@ -14,7 +14,7 @@ class BlocSimulator extends BlocBase {
 
   double percent = 0.25;
 
-  ModelUser user = ModelUser();
+  ModelSimulation simulation = ModelSimulation();
 
   void clear() {
     //
@@ -59,22 +59,22 @@ class BlocSimulator extends BlocBase {
   }
 
   void setAmount(double value) {
-    if (value != user.amount) {
-      user.amount = value;
+    if (value != simulation.amount) {
+      simulation.amount = value;
       notifyListeners();
     }
   }
 
   void setMonths(int value) {
-    if (value != user.months) {
-      user.months = value;
+    if (value != simulation.months) {
+      simulation.months = value;
       notifyListeners();
     }
   }
 
   void setUserType(String value) {
-    if (value != user.type) {
-      user.type = value;
+    if (value != simulation.type) {
+      simulation.type = value;
       notifyListeners();
     }
   }
