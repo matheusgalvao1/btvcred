@@ -9,7 +9,7 @@ import 'utility/CustomTheme.dart';
 import 'view/home/main.dart';
 import 'view/router/main.dart';
 import 'view/router/Routes.dart';
-import 'view/simulator/main.dart';
+import 'view/Simulation/simulator/main.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

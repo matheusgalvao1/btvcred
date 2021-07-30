@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';
 
-import '../../components/ButtonIcon.dart';
+import '../../../components/ButtonIcon.dart';
 
 part 'Contact.dart';
 part 'MoreData.dart';

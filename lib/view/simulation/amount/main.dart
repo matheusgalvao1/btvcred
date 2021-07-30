@@ -2,7 +2,7 @@ import 'package:btvcred/components/Button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../bloc/Simulator.dart';
+import '../../../bloc/Simulator.dart';
 
 part 'Input.dart';
 

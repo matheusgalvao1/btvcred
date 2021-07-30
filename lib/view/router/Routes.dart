@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/CustomSafe.dart';
 import '../../view/home/main.dart';
-import '../../view/simulator/main.dart';
+import '../../view/Simulation/simulator/main.dart';
 import '../../view/router/Offline.dart';
 
 class Routes {

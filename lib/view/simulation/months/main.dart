@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:numberpicker/numberpicker.dart';
 
-import '../../components/Button.dart';
-import '../../utility/Pointer.dart';
+import '../../../components/Button.dart';
+import '../../../utility/Pointer.dart';
 
 part 'Picker.dart';
 
