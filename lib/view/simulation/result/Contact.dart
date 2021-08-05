@@ -24,6 +24,7 @@ class Contact extends StatelessWidget {
           ButtonWithIcon(
             text: 'WhatsApp',
             icon: CommunityMaterialIcons.whatsapp,
+            iconColor: Colors.green,
           ),
           SizedBox(height: 15),
           ButtonWithIcon(

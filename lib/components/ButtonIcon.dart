@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class ButtonWithIcon extends StatelessWidget {
   const ButtonWithIcon({
+    this.iconColor,
     this.height,
     this.icon,
     this.onTap,
@@ -9,6 +10,7 @@ class ButtonWithIcon extends StatelessWidget {
     this.width,
   });
 
+  final Color iconColor;
   final Function onTap;
   final IconData icon;
   final String text;
@@ -22,7 +24,7 @@ class ButtonWithIcon extends StatelessWidget {
         //constraints: BoxConstraints(minHeight: 70, maxHeight: 100,maxWidth: 200),
         height: height,
         width: width,
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
@@ -41,6 +43,7 @@ class ButtonWithIcon extends StatelessWidget {
             ),
             Icon(
               icon,
+              color: iconColor,
               size: 50,
             ),
           ],

@@ -6,7 +6,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 import '../../../components/ButtonIcon.dart';
 
 part 'Contact.dart';
-part 'MoreData.dart';
+part 'InterestValue.dart';
 
 class Result extends StatelessWidget {
   @override
@@ -57,29 +57,7 @@ class Result extends StatelessWidget {
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () => MoreData()._showMyDialog(context),
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  padding: EdgeInsets.all(20),
-                  child: Center(
-                    child: Text(
-                      'Mais dados do empréstimo',
-                      style: Theme.of(context).textTheme.headline1.copyWith(
-                            decoration: TextDecoration.underline,
-                            color: Theme.of(context).colorScheme.primary,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 15,
-                          ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          //InterestValue(),
           SizedBox(height: 30),
           Contact(),
         ],
