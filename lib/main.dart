@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
 
+import 'bloc/FgtsSimulator.dart';
 import 'bloc/router.dart';
 import 'bloc/Simulator.dart';
 import 'utility/CustomTheme.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         theme: CustomTheme.light,
       ),
       blocs: <Bloc<dynamic>>[
+        Bloc<BlocFgtsSimulator>((dynamic i) => BlocFgtsSimulator()),
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
         Bloc<BlocSimulator>((dynamic i) => BlocSimulator()),
       ],

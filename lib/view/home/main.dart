@@ -55,7 +55,7 @@ class Home extends StatelessWidget {
               text: 'Saque FGTS',
               width: 150,
               height: 80,
-              onTap: () {},
+              onTap: () => Navigator.pushNamed(context, '/fgts'),
             ),
           ],
         ),
