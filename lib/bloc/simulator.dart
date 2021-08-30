@@ -52,7 +52,7 @@ class BlocSimulator extends BlocBase {
   }
 
   void previousPercentage() {
-    if (percent >= 0.25) {
+    if (percent > 0.25) {
       percent -= 0.25;
       notifyListeners();
     }

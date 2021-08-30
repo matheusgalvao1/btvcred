@@ -14,7 +14,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   bloc_pattern: ^3.0.0
   community_material_icon: ^5.9.55
-  firebase_remote_config: ^0.6.0
+  firebase_core: ^1.4.0
+  firebase_remote_config: ^0.10.0+3
   flare_splash_screen: ^3.0.1
   flushbar: ^1.10.4
   flutter_launcher_icons: ^0.9.0

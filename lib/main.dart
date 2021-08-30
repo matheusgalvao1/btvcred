@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart'  hide Router;
 import 'package:flutter/services.dart';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 
 import 'bloc/FgtsSimulator.dart';
@@ -10,14 +11,15 @@ import 'utility/CustomTheme.dart';
 import 'view/home/main.dart';
 import 'view/router/main.dart';
 import 'view/router/Routes.dart';
-import 'view/Simulation/simulator/main.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(<DeviceOrientation>[
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+
+  await Firebase.initializeApp();
 
   runApp(MyApp());
 }

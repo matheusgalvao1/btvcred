@@ -16,7 +16,7 @@
         "**/build": false,
         "build": true,
         "**/android": false,
-        "android": true,
+        "android": false,
         "**/.vscode": false,
         ".vscode": true,
         "**/.idea": false,

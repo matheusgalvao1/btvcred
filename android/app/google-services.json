@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "40485109513",
+    "project_id": "bemtevi-3d0c4",
+    "storage_bucket": "bemtevi-3d0c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40485109513:android:d37d8db3054e6221355dd8",
+        "android_client_info": {
+          "package_name": "com.btvcred"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40485109513-d1imasjrosue1du4ph1e2o49qvqqv1af.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOe5yzoQyMgLnT7BwlANza5arcQ2LqGvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40485109513-d1imasjrosue1du4ph1e2o49qvqqv1af.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,4 @@
-package com.example.btvcred
+package com.btvcred
 
 import io.flutter.embedding.android.FlutterActivity
 
