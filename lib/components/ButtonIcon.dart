@@ -5,6 +5,7 @@ class ButtonWithIcon extends StatelessWidget {
     this.iconColor,
     this.height,
     this.icon,
+    this.iconSize,
     this.onTap,
     this.text,
     this.width,
@@ -14,7 +15,7 @@ class ButtonWithIcon extends StatelessWidget {
   final Function onTap;
   final IconData icon;
   final String text;
-  final double width, height;
+  final double width, height, iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class ButtonWithIcon extends StatelessWidget {
             Icon(
               icon,
               color: iconColor,
-              size: 50,
+              size: iconSize != null ? iconSize : 50,
             ),
           ],
         ),
