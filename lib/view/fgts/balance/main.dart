@@ -22,7 +22,7 @@ class Balance extends StatelessWidget {
         shrinkWrap: true,
         children: [
           Text(
-            'Saldo FGTS',
+            'Quanto você tem de saldo no FGTS?',
             style: Theme.of(context)
                 .textTheme
                 .headline1

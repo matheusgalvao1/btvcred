@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart'  hide Router;
+import 'package:flutter/material.dart' hide Router;
 import 'package:flutter/services.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:one_context/one_context.dart';
 
 import 'bloc/FgtsSimulator.dart';
-import 'bloc/router.dart';
+import 'bloc/Router.dart';
 import 'bloc/Simulator.dart';
 import 'utility/CustomTheme.dart';
 import 'view/home/main.dart';
@@ -30,16 +31,18 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       child: MaterialApp(
         title: 'App Btv',
-        home: Home(),
+        home: Router(),
         routes: Routes.get(),
         darkTheme: CustomTheme.dark,
         theme: CustomTheme.light,
+        navigatorKey: OneContext().navigator.key,
       ),
       blocs: <Bloc<dynamic>>[
         Bloc<BlocFgtsSimulator>((dynamic i) => BlocFgtsSimulator()),
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
         Bloc<BlocSimulator>((dynamic i) => BlocSimulator()),
       ],
+      
       dependencies: [],
     );
   }

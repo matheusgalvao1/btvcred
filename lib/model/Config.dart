@@ -2,28 +2,16 @@ import 'package:flutter/material.dart';
 
 class ModelConfig {
   ModelConfig({
-    @required this.api,
     @required this.app,
-    @required this.linkAndroid,
-    @required this.linkIOS,
-    @required this.maintenance,
-    @required this.versionAndroid,
-    @required this.versionIOS,
   });
 
-  final bool
-      //
-      maintenance;
+  final ConfigAPP app;
+}
 
-  final Map<String, dynamic>
-      //
-      api,
-      app;
+class ConfigAPP {
+  ConfigAPP({
+    @required this.whatsApp,
+  });
 
-  final String
-      //
-      linkAndroid,
-      linkIOS,
-      versionAndroid,
-      versionIOS;
+  final String whatsApp;
 }

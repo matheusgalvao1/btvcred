@@ -14,48 +14,36 @@ class BlocRouter extends BlocBase {
   String navigator;
 
   Future<void> init() async {
+    print('Entrou no init');
     await initConfig();
+    print('Passou no initConfig');
     await setNavigator();
+    print('Fim do init');
   }
 
   static Future<void> initConfig({bool clear = false}) async {
-    Future.delayed(Duration(seconds: 3));
-    // try {
-    //   final RemoteConfig remoteConfig = await RemoteConfig.instance;
+    try {
+      final RemoteConfig remoteConfig = RemoteConfig.instance;
 
-    //   Map<String, dynamic> _cache;
-    //   bool _update = true;
+      Map<String, dynamic> _map;
 
-    //   try {
-    //     await remoteConfig.fetch(
-    //       expiration: clear == false
-    //           ? const Duration(hours: 12)
-    //           : const Duration(minutes: 0),
-    //     );
-    //     await remoteConfig.activateFetched();
+      try {
+        await remoteConfig.fetchAndActivate();
+        _map = remoteConfig.getAll().map<String, dynamic>(
+            (String key, RemoteConfigValue value) =>
+                MapEntry<String, dynamic>(key, jsonDecode(value.asString())));
+      } catch (e) {
+        _map = await FunctionCache.getConfig();
+      }
 
-    //     _cache = remoteConfig.getAll().map<String, dynamic>(
-    //         (String key, RemoteConfigValue value) =>
-    //             MapEntry<String, dynamic>(key, jsonDecode(value.asString())));
-    //   } catch (e) {
-    //     _update = false;
-    //     _cache = await FunctionCache.getConfig();
-    //   }
-
-    //   config = ModelConfig(
-    //     api: _cache['api_server'] as Map<String, dynamic>,
-    //     app: _cache['config_app'] as Map<String, dynamic>,
-    //     maintenance: _cache['app_maintenance'] as bool,
-    //     linkAndroid: _cache['store_link']['android'] as String,
-    //     linkIOS: _cache['store_link']['ios'] as String,
-    //     versionAndroid: _cache['store_version']['android'] as String,
-    //     versionIOS: _cache['store_version']['ios'] as String,
-    //   );
-
-    //   if (Platform.isIOS) await FunctionCache.saveConfig(_cache, _update);
-    // } catch (e) {
-    //   return e;
-    // }
+      config = ModelConfig(
+        app: ConfigAPP(
+          whatsApp: _map['config_app']['whatsapp'] as String,
+        ),
+      );
+    } catch (e) {
+      return e;
+    }
   }
 
   Future<void> setNavigator() async {
@@ -65,7 +53,6 @@ class BlocRouter extends BlocBase {
       navigator = '/offline';
     } else if (_value == null) {
       navigator = '/home';
-      return;
     } else {
       final String _data = json.decode(_value).toString();
       if (_data == '/home') {
