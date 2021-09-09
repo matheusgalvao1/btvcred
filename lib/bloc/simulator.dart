@@ -12,9 +12,13 @@ class BlocSimulator extends BlocBase {
 
   int cPage = 0;
 
-  double percent = 0.25;
+  double
+      //
+      auxCalculate = 0,
+      percent = 0.25;
 
-  var amountController = MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
+  var amountController =
+      MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
 
   FixedExtentScrollController pickerController = FixedExtentScrollController();
 
@@ -32,13 +36,33 @@ class BlocSimulator extends BlocBase {
   void reset() {
     cPage = 0;
     percent = 0.25;
-    amountController = MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
+    amountController =
+        MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
   }
 
   void backHome() {
     reset();
     OneContext().navigator.pop();
+  }
 
+  void calculateResult() {
+    switch (simulation.type) {
+      case 'INSS':
+        auxCalculate = config.app.parcelasINSS[simulation.months.toString()];
+        break;
+      case 'M':
+        auxCalculate = config.app.parcelasEst[simulation.months.toString()];
+        break;
+      case 'E':
+        auxCalculate = config.app.parcelasEst[simulation.months.toString()];
+        break;
+      case 'F':
+        auxCalculate = config.app.parcelasFed[simulation.months.toString()];
+        break;
+    }
+    print(auxCalculate);
+    simulation.result = simulation.amount * auxCalculate;
+    notifyListeners();
   }
 
   void defineParcelas(String type) {

@@ -48,6 +48,7 @@ class _PickerState extends State<Picker> {
                 width: 150,
                 onTap: () {
                   bloc.setMonths();
+                  bloc.calculateResult();
                   bloc.nextPage();
                 },
               ),

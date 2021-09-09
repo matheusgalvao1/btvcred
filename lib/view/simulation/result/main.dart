@@ -56,7 +56,7 @@ class Result extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'R\$ 3000,00',
+                    'R\$ ' + bloc.simulation.result.toStringAsFixed(2).replaceAll('.', ','),
                     style: Theme.of(context).textTheme.headline1.copyWith(
                           fontWeight: FontWeight.w600,
                           fontSize: 50,
