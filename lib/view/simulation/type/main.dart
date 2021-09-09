@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
 
-import '../../bloc/Simulator.dart';
-import '../../components/Button.dart';
-import '../../components/ButtonOutlined.dart';
-import '../../utility/Pointer.dart';
+import '../../../bloc/Simulator.dart';
+import '../../../components/Button.dart';
+import '../../../components/ButtonOutlined.dart';
+import '../../../utility/Pointer.dart';
 
 part 'Modal.dart';
 

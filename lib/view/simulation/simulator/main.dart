@@ -6,7 +6,7 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 
 import '../../../bloc/Simulator.dart';
 import '../../../utility/Pointer.dart';
-import '../../type/main.dart';
+import '../type/main.dart';
 import '../amount/main.dart';
 import '../months/main.dart';
 import '../result/main.dart';
