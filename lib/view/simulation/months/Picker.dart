@@ -26,9 +26,9 @@ class _PickerState extends State<Picker> {
             magnification: 1.3,
             selectionOverlay: CupertinoPickerDefaultSelectionOverlay(),
             children: List.generate(
-              blocSimulator.parcelasInss.length,
+              blocSimulator.parcelasFed.length,
               (index) => Text(
-                blocSimulator.parcelasInss[index].toString() + "x",
+                blocSimulator.parcelasFed[index].toString() + "x",
                 style: Theme.of(context)
                     .textTheme
                     .headline1

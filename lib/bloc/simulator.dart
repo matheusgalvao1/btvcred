@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
+import 'package:extended_masked_text/extended_masked_text.dart';
 
 import '../../model/Simulation.dart';
 import '../../utility/Pointer.dart';
@@ -9,15 +10,17 @@ import '../../utility/Pointer.dart';
 class BlocSimulator extends BlocBase {
   PageController pageController = PageController();
 
-  int
-      //
-      cPage = 0;
+  int cPage = 0;
 
   double percent = 0.25;
+
+  final amountController = MoneyMaskedTextController(leftSymbol: 'R\$ ',initialValue: 0);
 
   ModelSimulation simulation = ModelSimulation();
 
   List parcelasInss = config.app.parcelasINSS.keys.toList();
+  List parcelasEst = config.app.parcelasEst.keys.toList();
+  List parcelasFed = config.app.parcelasFed.keys.toList();
 
   void clear() {
     //

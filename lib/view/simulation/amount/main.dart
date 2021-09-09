@@ -17,9 +17,10 @@ class Amount extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .25,
+          top: MediaQuery.of(context).size.height * .15,
           left: 30,
           right: 30,
+          bottom: 30,
         ),
         shrinkWrap: true,
         children: [
@@ -31,8 +32,8 @@ class Amount extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.w600),
           ),
           SizedBox(height: 15),
-          InputAmount(),
-          SizedBox(height: 30),
+          InputAmount(bloc),
+          SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -40,7 +41,7 @@ class Amount extends StatelessWidget {
                 text: "Continuar",
                 width: 150,
                 onTap: () {
-                  //
+                  bloc.setAmount(bloc.amountController.numberValue);
                   bloc.nextPage();
                 },
               ),
