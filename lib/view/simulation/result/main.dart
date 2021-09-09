@@ -7,6 +7,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 import '../../../bloc/Simulator.dart';
 import '../../../components/Button.dart';
 import '../../../components/ButtonIcon.dart';
+import '../simulator/main.dart';
 
 part 'Contact.dart';
 part 'InterestValue.dart';
@@ -17,6 +18,8 @@ class Result extends StatelessWidget {
     return Consumer<BlocSimulator>(
         builder: (BuildContext context, BlocSimulator bloc) {
       return Scaffold(
+        floatingActionButton: Fab(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
         body: ListView(
           padding: EdgeInsets.all(30),
           physics: BouncingScrollPhysics(),

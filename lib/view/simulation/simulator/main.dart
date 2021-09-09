@@ -22,8 +22,8 @@ class Simulator extends StatelessWidget {
       builder: (BuildContext context, BlocSimulator bloc) {
         return Scaffold(
           appBar: AppBarSimulator(bloc),
-          floatingActionButton: Fab(),
-          floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+          // floatingActionButton: Fab(),
+          // floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
           body: PageView(
             controller: bloc.pageController,
             physics: NeverScrollableScrollPhysics(),

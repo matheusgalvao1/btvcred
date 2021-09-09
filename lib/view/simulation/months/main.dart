@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../bloc/Simulator.dart';
 import '../../../components/Button.dart';
 import '../../../utility/Pointer.dart';
+import '../simulator/main.dart';
 
 part 'Picker.dart';
 
@@ -14,6 +15,8 @@ class Months extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Fab(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       body: ListView(
         children: [
           Padding(

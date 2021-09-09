@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../bloc/Simulator.dart';
+import '../simulator/main.dart';
 
 part 'Input.dart';
 
@@ -14,6 +15,8 @@ class Amount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Fab(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
