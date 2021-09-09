@@ -20,6 +20,7 @@ class Router extends StatelessWidget {
               (_) => false,
             );
           },
+          backgroundColor: Theme.of(context).colorScheme.background,
           onError: (dynamic error, dynamic stacktrace) {},
           until: () => bloc.init(),
           startAnimation: 'btv',
