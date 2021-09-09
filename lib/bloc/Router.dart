@@ -14,11 +14,8 @@ class BlocRouter extends BlocBase {
   String navigator;
 
   Future<void> init() async {
-    print('Entrou no init');
     await initConfig();
-    print('Passou no initConfig');
     await setNavigator();
-    print('Fim do init');
   }
 
   static Future<void> initConfig({bool clear = false}) async {

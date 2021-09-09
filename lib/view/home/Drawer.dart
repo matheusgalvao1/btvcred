@@ -25,9 +25,28 @@ class MyDrawer extends StatelessWidget {
           ),
           SizedBox(height: 20),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                CommunityMaterialIcons.whatsapp,
+                color: Theme.of(context).colorScheme.primary,
+                size: 40,
+              ),
+              SizedBox(width: 10),
+              Text(
+                config.app.whatsApp,
+                style: Theme.of(context).textTheme.headline1.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               IconButton(
+                highlightColor: Colors.transparent,
                 onPressed: () {},
                 icon: Icon(
                   Icons.settings,
