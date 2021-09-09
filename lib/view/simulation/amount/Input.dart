@@ -10,13 +10,12 @@ class InputAmount extends StatelessWidget {
     return Container(
       child: TextField(
         autofocus: true,
-        cursorRadius: Radius.circular(100),
         controller: bloc.amountController,
-        keyboardType: TextInputType.number,
+        cursorRadius: Radius.circular(100),
         focusNode: bloc.inputFocus,
+        keyboardType: TextInputType.number,
         onSubmitted: (String text) {
-          bloc.setAmount(bloc.amountController.numberValue);
-          bloc.nextPage();
+          bloc.validateInput(bloc.amountController.numberValue, context);
         },
         style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 40),
         decoration: InputDecoration(

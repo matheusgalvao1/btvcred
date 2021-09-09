@@ -20,7 +20,7 @@ class Amount extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .15,
+          top: MediaQuery.of(context).size.height * .2,
           left: 30,
           right: 30,
           bottom: 30,
@@ -45,9 +45,7 @@ class Amount extends StatelessWidget {
                 width: 150,
                 onTap: () async {
                   bloc.inputFocus.unfocus();
-                  await Future.delayed(Duration(milliseconds: 200));
-                  bloc.setAmount(bloc.amountController.numberValue);
-                  bloc.nextPage();
+                  bloc.validateInput(bloc.amountController.numberValue, context);
                 },
               ),
             ],

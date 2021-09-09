@@ -1,3 +1,4 @@
+import 'package:btvcred/components/CustomBar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
@@ -8,14 +9,13 @@ import '../../model/Simulation.dart';
 import '../../utility/Pointer.dart';
 
 class BlocSimulator extends BlocBase {
-
   bool showTotal = false;
 
   PageController pageController = PageController();
 
   int cPage = 0;
 
-  double get totalWithInterest => simulation.result*simulation.months;
+  double get totalWithInterest => simulation.result * simulation.months;
 
   double
       //
@@ -146,7 +146,7 @@ class BlocSimulator extends BlocBase {
   }
 
   void setShowTotal({bool value}) {
-    if(value == null)
+    if (value == null)
       showTotal = !showTotal;
     else
       showTotal = value;
@@ -158,6 +158,20 @@ class BlocSimulator extends BlocBase {
       simulation.type = value;
       notifyListeners();
       defineParcelas(simulation.type);
+    }
+  }
+
+  void validateInput(double value, BuildContext ctx) async {
+    if (value == 0)
+      CustomBar.showAlert(
+        context: ctx,
+        title: 'Valor não pode ser 0',
+        message: 'Digite novamente',
+      );
+    else {
+      await Future.delayed(Duration(milliseconds: 200));
+      setAmount(value);
+      nextPage();
     }
   }
 }
