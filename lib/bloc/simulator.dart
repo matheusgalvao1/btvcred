@@ -14,16 +14,39 @@ class BlocSimulator extends BlocBase {
 
   double percent = 0.25;
 
-  final amountController = MoneyMaskedTextController(leftSymbol: 'R\$ ',initialValue: 0);
+  final amountController =
+      MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
 
   ModelSimulation simulation = ModelSimulation();
 
   List parcelasInss = config.app.parcelasINSS.keys.toList();
   List parcelasEst = config.app.parcelasEst.keys.toList();
   List parcelasFed = config.app.parcelasFed.keys.toList();
+  List listGeneric = [];
 
   void clear() {
     //
+  }
+
+  void defineParcelas(String type) {
+    listGeneric.clear();
+    switch (type) {
+      case 'INSS':
+        listGeneric = parcelasInss;
+        break;
+      case 'M':
+        listGeneric = parcelasEst;
+        break;
+      case 'E':
+        listGeneric = parcelasEst;
+        break;
+      case 'F':
+        listGeneric = parcelasFed;
+        break;
+      default:
+        listGeneric = parcelasInss;
+    }
+    notifyListeners();
   }
 
   void nextPage() {
@@ -82,6 +105,7 @@ class BlocSimulator extends BlocBase {
     if (value != simulation.type) {
       simulation.type = value;
       notifyListeners();
+      defineParcelas(simulation.type);
     }
   }
 }
