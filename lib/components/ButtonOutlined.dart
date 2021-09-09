@@ -17,6 +17,7 @@ class ButtonOutlined extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      highlightColor: Colors.transparent,
       child: Container(
         //constraints: BoxConstraints(minHeight: 70, maxHeight: 100,maxWidth: 200),
         height: height,

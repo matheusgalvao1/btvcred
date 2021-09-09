@@ -14,8 +14,7 @@ class BlocSimulator extends BlocBase {
 
   double percent = 0.25;
 
-  final amountController =
-      MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
+  var amountController = MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
 
   FixedExtentScrollController pickerController = FixedExtentScrollController();
 
@@ -28,6 +27,18 @@ class BlocSimulator extends BlocBase {
 
   void clear() {
     //
+  }
+
+  void reset() {
+    cPage = 0;
+    percent = 0.25;
+    amountController = MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
+  }
+
+  void backHome() {
+    reset();
+    OneContext().navigator.pop();
+
   }
 
   void defineParcelas(String type) {
@@ -67,7 +78,7 @@ class BlocSimulator extends BlocBase {
     notifyListeners();
   }
 
-  void previousPage(BuildContext context) async {
+  void previousPage() async {
     if (cPage > 0) {
       previousPercentage();
       await pageController.previousPage(
@@ -77,7 +88,7 @@ class BlocSimulator extends BlocBase {
       cPage--;
       notifyListeners();
     } else {
-      Navigator.pop(context);
+      backHome();
     }
   }
 

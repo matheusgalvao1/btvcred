@@ -11,7 +11,7 @@ class Fab extends StatelessWidget {
         color: Colors.white, //Theme.of(context).colorScheme.onSecondary,
       ),
       onPressed: () {
-        blocSimulator.previousPage(context);
+        blocSimulator.previousPage();
       },
     );
   }

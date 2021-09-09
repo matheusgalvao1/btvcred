@@ -24,12 +24,13 @@ class Contact extends StatelessWidget {
           ButtonWithIcon(
             text: 'WhatsApp',
             icon: CommunityMaterialIcons.whatsapp,
-            iconColor: Colors.green,
+            iconColor: Theme.of(context).colorScheme.primary,
           ),
           SizedBox(height: 15),
           ButtonWithIcon(
             text: 'Ligação',
             icon: CupertinoIcons.phone,
+            iconColor: Theme.of(context).colorScheme.primary,
           ),
         ],
       ),
