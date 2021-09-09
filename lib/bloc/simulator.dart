@@ -8,9 +8,14 @@ import '../../model/Simulation.dart';
 import '../../utility/Pointer.dart';
 
 class BlocSimulator extends BlocBase {
+
+  bool showTotal = false;
+
   PageController pageController = PageController();
 
   int cPage = 0;
+
+  double get totalWithInterest => simulation.result*simulation.months;
 
   double
       //
@@ -136,6 +141,14 @@ class BlocSimulator extends BlocBase {
       notifyListeners();
       print('Parcelas: ' + simulation.months.toString());
     }
+  }
+
+  void setShowTotal({bool value}) {
+    if(value == null)
+      showTotal = !showTotal;
+    else
+      showTotal = value;
+    notifyListeners();
   }
 
   void setUserType(String value) {

@@ -1,3 +1,4 @@
+import 'package:btvcred/utility/Pointer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -65,7 +66,8 @@ class Result extends StatelessWidget {
                 ),
               ],
             ),
-            //InterestValue(),
+            SizedBox(height: 10),
+            InterestValue(bloc),
             SizedBox(height: 30),
             Contact(),
             SizedBox(height: 30),
