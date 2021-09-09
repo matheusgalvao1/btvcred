@@ -13,7 +13,7 @@ class _PickerState extends State<Picker> {
       return Column(
         children: [
           Container(
-            height: 400,
+            height: MediaQuery.of(context).size.height * .4,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               border: Border.all(
@@ -22,8 +22,9 @@ class _PickerState extends State<Picker> {
               ),
             ),
             child: CupertinoPicker(
-              itemExtent: 60,
+              itemExtent: MediaQuery.of(context).size.height * .07,
               onSelectedItemChanged: (int index) {},
+              scrollController: bloc.pickerController,
               diameterRatio: 1,
               magnification: 1.3,
               selectionOverlay: CupertinoPickerDefaultSelectionOverlay(),
@@ -31,10 +32,8 @@ class _PickerState extends State<Picker> {
                 bloc.listGeneric.length,
                 (index) => Text(
                   bloc.listGeneric[index].toString() + "x",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline1
-                      .copyWith(fontSize: 35),
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                      fontSize: MediaQuery.of(context).size.height * .035),
                 ),
               ),
             ),
@@ -47,7 +46,7 @@ class _PickerState extends State<Picker> {
                 text: 'Continuar',
                 width: 150,
                 onTap: () {
-                  //bloc.setMonths(_currentValue);
+                  bloc.setMonths();
                   bloc.nextPage();
                 },
               ),

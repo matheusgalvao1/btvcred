@@ -17,6 +17,8 @@ class BlocSimulator extends BlocBase {
   final amountController =
       MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
 
+  FixedExtentScrollController pickerController = FixedExtentScrollController();
+
   ModelSimulation simulation = ModelSimulation();
 
   List parcelasInss = config.app.parcelasINSS.keys.toList();
@@ -93,10 +95,11 @@ class BlocSimulator extends BlocBase {
     }
   }
 
-  void setMonths(int value) {
-    if (value != simulation.months) {
-      simulation.months = value;
+  void setMonths() {
+    if (listGeneric[pickerController.selectedItem] != simulation.months) {
+      simulation.months = int.parse(listGeneric[pickerController.selectedItem]);
       notifyListeners();
+      print('Parcelas: ' + simulation.months.toString());
     }
   }
 
