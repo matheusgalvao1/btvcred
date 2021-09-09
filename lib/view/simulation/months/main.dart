@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:numberpicker/numberpicker.dart';
 
+import '../../../bloc/Simulator.dart';
 import '../../../components/Button.dart';
 import '../../../utility/Pointer.dart';
 

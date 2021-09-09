@@ -29,7 +29,6 @@ class BlocSimulator extends BlocBase {
   }
 
   void defineParcelas(String type) {
-    listGeneric.clear();
     switch (type) {
       case 'INSS':
         listGeneric = parcelasInss;
