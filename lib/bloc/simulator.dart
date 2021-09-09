@@ -4,6 +4,7 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
 
 import '../../model/Simulation.dart';
+import '../../utility/Pointer.dart';
 
 class BlocSimulator extends BlocBase {
   PageController pageController = PageController();
@@ -15,6 +16,8 @@ class BlocSimulator extends BlocBase {
   double percent = 0.25;
 
   ModelSimulation simulation = ModelSimulation();
+
+  List parcelasInss = config.app.parcelasINSS.keys.toList();
 
   void clear() {
     //
