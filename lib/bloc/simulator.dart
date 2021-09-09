@@ -27,6 +27,8 @@ class BlocSimulator extends BlocBase {
 
   FixedExtentScrollController pickerController = FixedExtentScrollController();
 
+  FocusNode inputFocus = FocusNode();
+
   ModelSimulation simulation = ModelSimulation();
 
   List parcelasInss = config.app.parcelasINSS.keys.toList();

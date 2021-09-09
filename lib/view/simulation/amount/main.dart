@@ -43,7 +43,9 @@ class Amount extends StatelessWidget {
               MyButton(
                 text: "Continuar",
                 width: 150,
-                onTap: () {
+                onTap: () async {
+                  bloc.inputFocus.unfocus();
+                  await Future.delayed(Duration(milliseconds: 200));
                   bloc.setAmount(bloc.amountController.numberValue);
                   bloc.nextPage();
                 },
