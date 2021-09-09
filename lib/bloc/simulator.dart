@@ -111,6 +111,11 @@ class BlocSimulator extends BlocBase {
 
   void previousPage() async {
     if (cPage > 0) {
+      if(inputFocus.hasFocus)
+      {
+        inputFocus.unfocus();
+        await Future.delayed(Duration(milliseconds: 100));
+      }
       previousPercentage();
       await pageController.previousPage(
         duration: const Duration(milliseconds: 700),
@@ -169,7 +174,7 @@ class BlocSimulator extends BlocBase {
         message: 'Digite novamente',
       );
     else {
-      await Future.delayed(Duration(milliseconds: 200));
+      await Future.delayed(Duration(milliseconds: 100));
       setAmount(value);
       nextPage();
     }
