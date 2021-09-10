@@ -1,4 +1,9 @@
-part of 'main.dart';
+import 'package:flutter/material.dart';
+
+import 'package:community_material_icon/community_material_icon.dart';
+
+import '../../components/ButtonOutlined.dart';
+import '../../utility/Pointer.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -6,8 +11,6 @@ class MyDrawer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
       child: Column(
-        //physics: BouncingScrollPhysics(),
-        //padding: EdgeInsets.symmetric(vertical: 100, horizontal: 15),
         children: [
           Image.asset('lib/assets/images/bemtvlogo.png',
               height: MediaQuery.of(context).size.width * .3),

@@ -11,6 +11,7 @@ class InterestValue extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         InkWell(
+          highlightColor: Colors.transparent,
           onTap: () => bloc.setShowTotal(),
           child: Container(
             height: 50,
