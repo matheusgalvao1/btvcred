@@ -12,8 +12,6 @@ class Fgts extends StatelessWidget {
     return Consumer<BlocFgtsSimulator>(
       builder: (BuildContext context, BlocFgtsSimulator bloc) {
         return Scaffold(
-          //appBar: AppBarSimulator(bloc),
-          //floatingActionButton: Fab(),
           floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
           body: PageView(
             controller: bloc.pageController,

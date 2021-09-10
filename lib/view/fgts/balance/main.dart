@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../bloc/FgtsSimulator.dart';
+import '../../../components/Button.dart';
 
-import 'package:btvcred/components/Button.dart';
+part 'Input.dart';
 
 class Balance extends StatelessWidget {
   final BlocFgtsSimulator bloc;
@@ -12,10 +14,22 @@ class Balance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          onPressed: () => bloc.backHome(),
+          icon: Icon(
+            CupertinoIcons.left_chevron,
+            color: Theme.of(context).colorScheme.primary,
+            size: 30,
+          ),
+        ),
+      ),
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .25,
+          top: MediaQuery.of(context).size.height * .1,
           left: 30,
           right: 30,
         ),
@@ -29,7 +43,7 @@ class Balance extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.w600),
           ),
           SizedBox(height: 15),
-          //InputAmount(),
+          InputAmount(bloc),
           SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -37,7 +51,7 @@ class Balance extends StatelessWidget {
               MyButton(
                 text: "Continuar",
                 width: 150,
-                onTap: () {},
+                onTap: () => bloc.validateInput(context),
               ),
             ],
           ),

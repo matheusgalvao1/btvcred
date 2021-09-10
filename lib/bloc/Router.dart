@@ -1,11 +1,8 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
-import 'package:one_context/one_context.dart';
 
-import '../components/CustomBar.dart';
 import '../function/Cache.dart';
 import '../model/Config.dart';
 import '../utility/Pointer.dart';
@@ -16,6 +13,8 @@ class BlocRouter extends BlocBase {
   Future<void> init() async {
     await initConfig();
     await setNavigator();
+    print(config.app.showFGTS);
+    print(config.app.saldoMinFGTS);
   }
 
   static Future<void> initConfig({bool clear = false}) async {
@@ -42,6 +41,8 @@ class BlocRouter extends BlocBase {
           parcelasINSS: _map['config_app']['parcelasINSS'] as Map<String, dynamic>,
           parcelasEst: _map['config_app']['parcelasEst'] as Map<String, dynamic>,
           parcelasFed: _map['config_app']['parcelasFed'] as Map<String, dynamic>,
+          saldoMinFGTS: _map['config_app']['saldoMinFGTS'] as int,
+          showFGTS: _map['config_app']['showFGTS'] as bool,
         ),
       );
     } catch (e) {

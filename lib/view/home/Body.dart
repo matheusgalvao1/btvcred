@@ -32,12 +32,12 @@ class HomeBody extends StatelessWidget {
             onTap: () => Navigator.pushNamed(context, '/simulator'),
           ),
           SizedBox(height: 20),
-          MyButton(
+          config.app.showFGTS ? MyButton(
             text: 'Saque FGTS',
             width: 150,
             height: 80,
             onTap: () => Navigator.pushNamed(context, '/fgts'),
-          ),
+          ): SizedBox(),
         ],
       ),
     );
