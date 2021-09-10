@@ -9,6 +9,7 @@ import '../../utility/Pointer.dart';
 
 part 'AboutUs.dart';
 part 'Localization.dart';
+part 'TermsOfUse.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -19,7 +20,15 @@ class MyDrawer extends StatelessWidget {
         children: [
           Image.asset('lib/assets/images/bemtvlogo.png',
               height: MediaQuery.of(context).size.width * .3),
-          SizedBox(height: 50),
+          SizedBox(height: 15),
+          Text(
+            'BEM-TE-VI CRED',
+            style: Theme.of(context)
+                .textTheme
+                .headline1
+                .copyWith(fontWeight: FontWeight.w600),
+          ),
+          SizedBox(height: 30),
           ButtonOutlined(
             text: 'Sobre nós',
             onTap: () => ModalAboutUs().show(context),
@@ -30,6 +39,13 @@ class MyDrawer extends StatelessWidget {
           ButtonOutlined(
             text: 'Localização',
             onTap: () => ModalLocalization().show(context),
+            height: 60,
+            //width: 100,
+          ),
+          SizedBox(height: 15),
+          ButtonOutlined(
+            text: 'Termo de Uso',
+            onTap: () => ModalTermsOfUse().show(context),
             height: 60,
             //width: 100,
           ),
@@ -51,21 +67,6 @@ class MyDrawer extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              IconButton(
-                highlightColor: Colors.transparent,
-                onPressed: () {},
-                icon: Icon(
-                  Icons.settings,
-                  size: 40,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
-              ),
-            ],
-          )
         ],
       ),
     );
