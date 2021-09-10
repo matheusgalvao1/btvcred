@@ -34,6 +34,9 @@ class BlocSimulator extends BlocBase {
   List parcelasInss = config.app.parcelasINSS.keys.toList();
   List parcelasEst = config.app.parcelasEst.keys.toList();
   List parcelasFed = config.app.parcelasFed.keys.toList();
+  List parcelasExercito = config.app.parcelasExercito.keys.toList();
+  List parcelasMarinha = config.app.parcelasMarinha.keys.toList();
+  List parcelasAeronautica = config.app.parcelasAeronautica.keys.toList();
   List listGeneric = [];
 
   void clear() {
@@ -66,6 +69,15 @@ class BlocSimulator extends BlocBase {
       case 'F':
         auxCalculate = config.app.parcelasFed[simulation.months.toString()];
         break;
+      case 'Exer':
+        auxCalculate = config.app.parcelasExercito[simulation.months.toString()];
+        break;
+      case 'Mar':
+        auxCalculate = config.app.parcelasMarinha[simulation.months.toString()];
+        break;
+      case 'Aero':
+        auxCalculate = config.app.parcelasAeronautica[simulation.months.toString()];
+        break;
     }
     print(auxCalculate);
     simulation.result = simulation.amount * auxCalculate;
@@ -85,6 +97,15 @@ class BlocSimulator extends BlocBase {
         break;
       case 'F':
         listGeneric = parcelasFed;
+        break;
+      case 'Exer':
+        listGeneric = parcelasExercito;
+        break;
+      case 'Mar':
+        listGeneric = parcelasMarinha;
+        break;
+      case 'Aero':
+        listGeneric = parcelasAeronautica;
         break;
       default:
         listGeneric = parcelasInss;
@@ -111,8 +132,7 @@ class BlocSimulator extends BlocBase {
 
   void previousPage() async {
     if (cPage > 0) {
-      if(inputFocus.hasFocus)
-      {
+      if (inputFocus.hasFocus) {
         inputFocus.unfocus();
         await Future.delayed(Duration(milliseconds: 100));
       }
