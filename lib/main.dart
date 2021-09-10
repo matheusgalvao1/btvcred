@@ -5,11 +5,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
 
+import 'bloc/Contact.dart';
 import 'bloc/FgtsSimulator.dart';
 import 'bloc/Router.dart';
 import 'bloc/Simulator.dart';
 import 'utility/CustomTheme.dart';
-import 'view/home/main.dart';
 import 'view/router/main.dart';
 import 'view/router/Routes.dart';
 
@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
         navigatorKey: OneContext().navigator.key,
       ),
       blocs: <Bloc<dynamic>>[
+        Bloc<BlocContact>((dynamic i) => BlocContact()),
         Bloc<BlocFgtsSimulator>((dynamic i) => BlocFgtsSimulator()),
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
         Bloc<BlocSimulator>((dynamic i) => BlocSimulator()),

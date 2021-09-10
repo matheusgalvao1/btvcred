@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 
+import '../../../bloc/Contact.dart';
 import '../../../bloc/Simulator.dart';
-import '../../../components/Button.dart';
 import '../../../components/ButtonIcon.dart';
 import '../simulator/main.dart';
 

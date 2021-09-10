@@ -28,6 +28,7 @@ dependencies:
   page_transition: ^1.1.7+6
   path_provider: ^2.0.1
   percent_indicator: ^3.0.1
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:
