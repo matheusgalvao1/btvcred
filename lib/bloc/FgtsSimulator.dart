@@ -10,7 +10,7 @@ import '../utility/Pointer.dart';
 class BlocFgtsSimulator extends BlocBase {
   double
       //
-      balance,
+      balance = 0,
       percent = 0.25;
 
   int
@@ -33,7 +33,25 @@ class BlocFgtsSimulator extends BlocBase {
     OneContext().navigator.pop();
   }
 
+  void nextPage() {
+    if (cPage < 1) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 600),
+        curve: Curves.fastOutSlowIn,
+      );
+      cPage++;
+      notifyListeners();
+    }
+  }
+
   void reset() {}
+
+  void setBalance() {
+    if (amountController.numberValue != balance) {
+      balance = amountController.numberValue;
+      notifyListeners();
+    }
+  }
 
   void validateInput(BuildContext ctx) async {
     if (amountController.numberValue < config.app.saldoMinFGTS)
@@ -43,7 +61,7 @@ class BlocFgtsSimulator extends BlocBase {
         message: 'Deve ser pelo menos R\$ ' + saldoMin.toString() + ',00',
       );
     else {
-      //setAmount(value);
+      setBalance();
       if (inputFocus.hasFocus) {
         inputFocus.unfocus();
         await Future.delayed(Duration(milliseconds: 100));

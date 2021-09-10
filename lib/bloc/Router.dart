@@ -13,8 +13,6 @@ class BlocRouter extends BlocBase {
   Future<void> init() async {
     await initConfig();
     await setNavigator();
-    print(config.app.showFGTS);
-    print(config.app.saldoMinFGTS);
   }
 
   static Future<void> initConfig({bool clear = false}) async {
