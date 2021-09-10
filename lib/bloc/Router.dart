@@ -32,15 +32,19 @@ class BlocRouter extends BlocBase {
 
       config = ModelConfig(
         app: ConfigAPP(
-          whatsApp: _map['config_app']['whatsapp'] as String,
-          sobreNos: _map['config_app']['sobreNos'] as String,
-          termo: _map['config_app']['termo'] as String,
+          comoFuncionaFGTS: _map['config_app']['comoFuncionaFGTS'] as String,
           endereco: _map['config_app']['endereco'] as String,
-          parcelasINSS: _map['config_app']['parcelasINSS'] as Map<String, dynamic>,
+          parcelasAeronautica: _map['config_app']['parcelasAeronautica'] as Map<String, dynamic>,    
           parcelasEst: _map['config_app']['parcelasEst'] as Map<String, dynamic>,
+          parcelasExercito: _map['config_app']['parcelasExercito'] as Map<String, dynamic>,
           parcelasFed: _map['config_app']['parcelasFed'] as Map<String, dynamic>,
+          parcelasINSS: _map['config_app']['parcelasINSS'] as Map<String, dynamic>,
+          parcelasMarinha: _map['config_app']['parcelasMarinha'] as Map<String, dynamic>,
           saldoMinFGTS: _map['config_app']['saldoMinFGTS'] as int,
           showFGTS: _map['config_app']['showFGTS'] as bool,
+          sobreNos: _map['config_app']['sobreNos'] as String,
+          termo: _map['config_app']['termo'] as String,
+          whatsApp: _map['config_app']['whatsapp'] as String,
         ),
       );
     } catch (e) {

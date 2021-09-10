@@ -43,7 +43,7 @@ class Info extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           padding: EdgeInsets.all(30),
           children: [
-            Text('info', style: Theme.of(context).textTheme.headline2),
+            Text(config.app.comoFuncionaFGTS, style: Theme.of(context).textTheme.headline2),
           ],
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../bloc/FgtsSimulator.dart';
 import '../../../components/Button.dart';
+import '../../../utility/Pointer.dart';
 
 part 'Input.dart';
 part 'ModalInfo.dart';
