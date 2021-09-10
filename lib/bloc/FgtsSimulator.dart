@@ -44,7 +44,10 @@ class BlocFgtsSimulator extends BlocBase {
     }
   }
 
-  void reset() {}
+  void reset() {
+    amountController =
+      MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
+  }
 
   void setBalance() {
     if (amountController.numberValue != balance) {
