@@ -52,7 +52,7 @@ class Localization extends StatelessWidget {
                   ),
                   SizedBox(width: 15),
                   Expanded(
-                    child: Text('R. Mal. Deodoro da Fonseca, 17 - Centro, Ponta Grossa - PR, 84010-030',
+                    child: Text(config.app.endereco,
                         style: Theme.of(context).textTheme.headline2),
                   ),
                 ],

@@ -38,6 +38,7 @@ class BlocRouter extends BlocBase {
           whatsApp: _map['config_app']['whatsapp'] as String,
           sobreNos: _map['config_app']['sobreNos'] as String,
           termo: _map['config_app']['termo'] as String,
+          endereco: _map['config_app']['endereco'] as String,
           parcelasINSS: _map['config_app']['parcelasINSS'] as Map<String, dynamic>,
           parcelasEst: _map['config_app']['parcelasEst'] as Map<String, dynamic>,
           parcelasFed: _map['config_app']['parcelasFed'] as Map<String, dynamic>,

@@ -25,7 +25,7 @@ class BlocContact extends BlocBase {
   }
 
   Future<void> openMap() async {
-      String query = Uri.encodeComponent('R. Mal. Deodoro da Fonseca, 17 - Centro, Ponta Grossa - PR, 84010-030');
+      String query = Uri.encodeComponent(config.app.endereco);
       String googleUrl = "https://www.google.com/maps/search/?api=1&query=$query";
 
       await launch(googleUrl);

@@ -10,6 +10,7 @@ class ModelConfig {
 
 class ConfigAPP {
   ConfigAPP({
+    @required this.endereco,
     @required this.sobreNos,
     @required this.termo,
     @required this.whatsApp,
@@ -18,6 +19,7 @@ class ConfigAPP {
     @required this.parcelasFed,
   });
 
+  final String endereco;
   final String sobreNos;
   final String termo;
   final String whatsApp;
