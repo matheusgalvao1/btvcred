@@ -9,6 +9,7 @@ import '../../../utility/Pointer.dart';
 import '../simulator/main.dart';
 
 part 'Modal.dart';
+part 'ModalMilitary.dart';
 
 class Type extends StatelessWidget {
   final BlocSimulator bloc;
@@ -39,11 +40,11 @@ class Type extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * .2),
+            SizedBox(height: MediaQuery.of(context).size.height * .1),
             MyButton(
               text: 'Aposentado INSS',
               width: 150,
-              height: 80,
+              height: 60,
               onTap: () {
                 bloc.setUserType('INSS');
                 bloc.nextPage();
@@ -53,7 +54,7 @@ class Type extends StatelessWidget {
             MyButton(
               text: 'Pensionista INSS',
               width: 150,
-              height: 80,
+              height: 60,
               onTap: () {
                 bloc.setUserType('INSS');
                 bloc.nextPage();
@@ -63,8 +64,15 @@ class Type extends StatelessWidget {
             MyButton(
               text: 'Funcionário Público',
               width: 150,
-              height: 80,
+              height: 60,
               onTap: () => Modal.showModal(context),
+            ),
+            SizedBox(height: 20),
+            MyButton(
+              text: 'Militar',
+              width: 150,
+              height: 60,
+              onTap: () => ModalMilitary.showModal(context),
             ),
           ],
         ),
