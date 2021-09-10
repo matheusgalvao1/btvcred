@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';
 
 import '../../components/ButtonOutlined.dart';
 import '../../utility/Pointer.dart';
+
+part 'AboutUs.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -17,6 +20,7 @@ class MyDrawer extends StatelessWidget {
           SizedBox(height: 50),
           ButtonOutlined(
             text: 'Sobre nós',
+            onTap: () => ModalAboutUs().show(context),
             height: 60,
             //width: 100,
           ),
