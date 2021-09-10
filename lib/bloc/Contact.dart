@@ -10,10 +10,10 @@ class BlocContact extends BlocBase {
   String message = "teste";
 
   void sendWhatsApp() async {
-    var whatsAppURl = "whatsapp://send?phone=" + formatPhone() + "text=$message";
+    var whatsAppURl =
+        "whatsapp://send?phone=" + formatPhone() + "text=$message";
 
     await launch(whatsAppURl);
-
   }
 
   void callPhone() {
@@ -21,6 +21,14 @@ class BlocContact extends BlocBase {
   }
 
   String formatPhone() {
-    return '55'+ phoneNumber.replaceAll(' ', '').replaceAll('-', '');
+    return '55' + phoneNumber.replaceAll(' ', '').replaceAll('-', '');
+  }
+
+  Future<void> openMap() async {
+      String query = Uri.encodeComponent('R. Mal. Deodoro da Fonseca, 17 - Centro, Ponta Grossa - PR, 84010-030');
+      String googleUrl = "https://www.google.com/maps/search/?api=1&query=$query";
+
+      await launch(googleUrl);
+
   }
 }
