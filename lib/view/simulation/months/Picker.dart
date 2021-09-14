@@ -30,11 +30,31 @@ class _PickerState extends State<Picker> {
               selectionOverlay: CupertinoPickerDefaultSelectionOverlay(),
               children: List.generate(
                 bloc.listGeneric.length,
-                (index) => Text(
-                  bloc.listGeneric[index].toString() + "x",
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 35,
-                      ),
+                (index) => Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      bloc.listGeneric[index].toString() + "x",
+                      style: Theme.of(context).textTheme.headline1.copyWith(
+                            fontSize: 35,
+                          ),
+                    ),
+                    SizedBox(width: 5),
+                    (index == bloc.listGeneric.length - 1)
+                        ? Text(
+                            "Melhor\noferta",
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline4
+                                .copyWith(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 8,
+                                ),
+                          )
+                        : SizedBox(),
+                  ],
                 ),
               ),
             ),
@@ -60,5 +80,3 @@ class _PickerState extends State<Picker> {
     });
   }
 }
-
-

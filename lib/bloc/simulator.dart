@@ -111,6 +111,7 @@ class BlocSimulator extends BlocBase {
       default:
         listGeneric = parcelasInss;
     }
+    pickerController = FixedExtentScrollController(initialItem: listGeneric.length-1);
     notifyListeners();
   }
 
