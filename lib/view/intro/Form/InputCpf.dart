@@ -1,6 +1,10 @@
 part of 'main.dart';
 
 class InputCpf extends StatelessWidget {
+  InputCpf(this.bloc);
+
+  final BlocIntro bloc;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,7 +23,7 @@ class InputCpf extends StatelessWidget {
           ),
           SizedBox(height: 5),
           TextField(
-            //controller: bloc.amountController,
+            controller: bloc.cpfController,
             cursorRadius: Radius.circular(100),
             //focusNode: bloc.inputFocus,
             keyboardType: TextInputType.number,
