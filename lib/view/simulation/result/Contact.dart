@@ -14,7 +14,7 @@ class Contact extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      'Mandar proposta por:',
+                      'Contate nossos atendentes:',
                       style: Theme.of(context).textTheme.headline1.copyWith(
                             fontWeight: FontWeight.w600,
                           ),
