@@ -1,8 +1,12 @@
-import 'package:btvcred/bloc/Intro.dart';
-import 'package:btvcred/components/Button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../bloc/Intro.dart';
+import '../../../components/Button.dart';
+import '../../../utility/Pointer.dart';
+
 part 'InputCpf.dart';
+part 'ModalKnowMore.dart';
 
 class InputForms extends StatelessWidget {
   InputForms(this.bloc);
@@ -25,6 +29,9 @@ class InputForms extends StatelessWidget {
         ),
         SizedBox(height: 10),
         InkWell(
+          onTap: () {
+            ModalKnowMore().show(context);
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

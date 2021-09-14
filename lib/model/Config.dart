@@ -18,6 +18,7 @@ class ConfigAPP {
     @required this.parcelasEst,
     @required this.parcelasFed,
     @required this.saldoMinFGTS,
+    @required this.saibaMaisRegister,
     @required this.showFGTS,
     @required this.comoFuncionaFGTS,
     @required this.parcelasMarinha,
@@ -32,6 +33,7 @@ class ConfigAPP {
   final String termo;
   final String whatsApp;
   final String comoFuncionaFGTS;
+  final String saibaMaisRegister;
   final Map<String, dynamic> parcelasINSS;
   final Map<String, dynamic> parcelasEst;
   final Map<String, dynamic> parcelasFed;
