@@ -48,6 +48,7 @@ class BlocSimulator extends BlocBase {
     percent = 0.25;
     amountController =
         MoneyMaskedTextController(leftSymbol: 'R\$ ', initialValue: 0);
+    //notifyListeners();
   }
 
   void backHome() {
