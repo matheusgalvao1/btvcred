@@ -9,7 +9,7 @@ class BlocIntro extends BlocBase {
   int cPage = 0;
 
   void agree() {
-    FunctionCache.redirectTo('/home');
+    nextPage();
   }
 
   void nextPage() {
@@ -19,5 +19,9 @@ class BlocIntro extends BlocBase {
     );
     cPage++;
     notifyListeners();
+  }
+
+  Future<void> FinishRegister() async {
+    await FunctionCache.redirectTo('/home');
   }
 }

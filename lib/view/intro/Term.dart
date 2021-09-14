@@ -10,17 +10,26 @@ class Term extends StatelessWidget {
     return Stack(
       children: [
         ListView(
-          padding: EdgeInsets.symmetric(vertical: 90, horizontal: 30),
+          padding: EdgeInsets.only(top: 60, bottom: 150, right: 30, left: 30),
           physics: BouncingScrollPhysics(),
           children: [
-            Text(
-              "Termo de Uso",
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline1.copyWith(
-                    fontSize: 40,
-                    color: Theme.of(context).colorScheme.primary,
-                    fontWeight: FontWeight.w600,
-                  ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(
+                  CommunityMaterialIcons.book_account,
+                  size: MediaQuery.of(context).size.width*.1,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                Text(
+                  "Termo de Uso",
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                        fontSize: MediaQuery.of(context).size.width*.08,
+                        color: Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+              ],
             ),
             SizedBox(height: 30),
             Text(
@@ -36,7 +45,8 @@ class Term extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Center(
               child: MyButton(
-                text: 'Li e concordo',
+                text: 'Li e Concordo',
+                height: 80,
                 onTap: () => bloc.agree(),
               ),
             ),
