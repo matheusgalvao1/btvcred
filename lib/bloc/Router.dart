@@ -58,7 +58,7 @@ class BlocRouter extends BlocBase {
     if (config == null) {
       navigator = '/offline';
     } else if (_value == null) {
-      navigator = '/home';
+      navigator = '/intro';
     } else {
       final String _data = json.decode(_value).toString();
       if (_data == '/home') {

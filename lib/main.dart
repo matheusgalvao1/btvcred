@@ -7,6 +7,7 @@ import 'package:one_context/one_context.dart';
 
 import 'bloc/Contact.dart';
 import 'bloc/FgtsSimulator.dart';
+import 'bloc/Intro.dart';
 import 'bloc/Router.dart';
 import 'bloc/Simulator.dart';
 import 'utility/CustomTheme.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
       blocs: <Bloc<dynamic>>[
         Bloc<BlocContact>((dynamic i) => BlocContact()),
         Bloc<BlocFgtsSimulator>((dynamic i) => BlocFgtsSimulator()),
+        Bloc<BlocIntro>((dynamic i) => BlocIntro()),
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
         Bloc<BlocSimulator>((dynamic i) => BlocSimulator()),
       ],
