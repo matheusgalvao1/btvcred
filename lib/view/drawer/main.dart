@@ -50,22 +50,26 @@ class MyDrawer extends StatelessWidget {
             //width: 100,
           ),
           SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                CommunityMaterialIcons.whatsapp,
-                color: Theme.of(context).colorScheme.primary,
-                size: 40,
-              ),
-              SizedBox(width: 10),
-              Text(
-                config.app.whatsApp,
-                style: Theme.of(context).textTheme.headline1.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-            ],
+          InkWell(
+            highlightColor: Colors.transparent,
+            onTap: () => blocContact.openWhatsApp(),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  CommunityMaterialIcons.whatsapp,
+                  color: Theme.of(context).colorScheme.primary,
+                  size: 40,
+                ),
+                SizedBox(width: 10),
+                Text(
+                  config.app.whatsApp,
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

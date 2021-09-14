@@ -16,6 +16,13 @@ class BlocContact extends BlocBase {
     await launch(whatsAppURl);
   }
 
+    void openWhatsApp() async {
+    var whatsAppURl =
+        "whatsapp://send?phone=" + formatPhone();
+
+    await launch(whatsAppURl);
+  }
+
   void callPhone() {
     launch("tel://$phoneNumber");
   }
