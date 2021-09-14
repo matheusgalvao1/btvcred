@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 part 'InputCpf.dart';
 
 class InputForms extends StatelessWidget {
-
   InputForms(this.bloc);
 
   final BlocIntro bloc;
@@ -45,17 +44,18 @@ class InputForms extends StatelessWidget {
           ),
         ),
         SizedBox(height: 40),
-        InputCpf(),
+        InputCpf(bloc),
         //SizedBox(height: 20),
         //InputCpf(),
         SizedBox(height: 40),
         MyButton(
-                text: 'Continuar',
-                height: 80,
-                onTap: () {
-                  bloc.FinishRegister();
-                },
-              ),
+          text: 'Continuar',
+          height: 80,
+          onTap: () {
+            bloc.FinishRegister();
+          },
+        ),
+
       ],
     );
   }
