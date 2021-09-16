@@ -35,7 +35,6 @@ class BlocIntro extends BlocBase {
         title: 'CPF Inválido',
         message: Locale.tryAgain,
       );
-      print(cpfController.text.length);
     } else {
       await finishRegister();
     }
@@ -51,10 +50,10 @@ class BlocIntro extends BlocBase {
   Future<void> unfocusKeyboard() async {
     if (cpfFocus.hasFocus) {
       cpfFocus.unfocus();
-      Future.delayed(Duration(milliseconds: 100));
+      await Future.delayed(Duration(milliseconds: 100));
     } else if (emailFocus.hasFocus) {
       emailFocus.unfocus();
-      Future.delayed(Duration(milliseconds: 100));
+      await Future.delayed(Duration(milliseconds: 100));
     }
   }
 }

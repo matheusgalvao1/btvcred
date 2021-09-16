@@ -25,7 +25,7 @@ class InputEmail extends StatelessWidget {
           TextField(
             //controller: bloc.cpfController,
             cursorRadius: Radius.circular(100),
-            //focusNode: bloc.inputFocus,
+            focusNode: bloc.emailFocus,
             keyboardType: TextInputType.emailAddress,
             onSubmitted: (String text) {},
             style: Theme.of(context).textTheme.headline1,

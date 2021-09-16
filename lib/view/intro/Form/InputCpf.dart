@@ -25,7 +25,7 @@ class InputCpf extends StatelessWidget {
           TextField(
             controller: bloc.cpfController,
             cursorRadius: Radius.circular(100),
-            //focusNode: bloc.inputFocus,
+            focusNode: bloc.cpfFocus,
             keyboardType: TextInputType.number,
             onSubmitted: (String text) {},
             style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 30),
