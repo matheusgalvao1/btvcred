@@ -61,8 +61,8 @@ class InputForms extends StatelessWidget {
         MyButton(
           text: Locale.next,
           height: 80,
-          onTap: () {
-            bloc.FinishRegister();
+          onTap: () async {
+            await bloc.validate(context);
           },
         ),
 
