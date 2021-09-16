@@ -10,6 +10,7 @@ import 'bloc/FgtsSimulator.dart';
 import 'bloc/Intro.dart';
 import 'bloc/Router.dart';
 import 'bloc/Simulator.dart';
+import 'bloc/User.dart';
 import 'utility/CustomTheme.dart';
 import 'view/router/main.dart';
 import 'view/router/Routes.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         Bloc<BlocIntro>((dynamic i) => BlocIntro()),
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
         Bloc<BlocSimulator>((dynamic i) => BlocSimulator()),
+        Bloc<BlocUser>((dynamic i) => BlocUser()),
       ],
       
       dependencies: [],

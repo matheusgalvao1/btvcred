@@ -10,11 +10,16 @@ import '../drawer/main.dart';
 
 part 'Body.dart';
 
-
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    blocUser.init();
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          //blocUser.getCurrentPosition();
+        },
+      ),
       body: SliderMenuContainer(
         appBarPadding: EdgeInsets.only(top: 30),
         appBarColor: Theme.of(context).colorScheme.background,
