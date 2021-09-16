@@ -25,7 +25,7 @@ class Modal {
             child: Column(
               children: [
                 Text(
-                  'Tipo de Funcionário',
+                  Locale.typeEmployee,
                   style: Theme.of(context).textTheme.headline1.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
@@ -37,7 +37,7 @@ class Modal {
                 ),
                 SizedBox(height: 10),
                 ButtonOutlined(
-                  text: 'Municipal',
+                  text: Locale.public1,
                   height: 80,
                   width: 200,
                   onTap: () {
@@ -48,7 +48,7 @@ class Modal {
                 ),
                 SizedBox(height: 15),
                 ButtonOutlined(
-                  text: 'Estadual',
+                  text: Locale.public2,
                   height: 80,
                   width: 200,
                   onTap: () {
@@ -59,7 +59,7 @@ class Modal {
                 ),
                 SizedBox(height: 15),
                 ButtonOutlined(
-                  text: 'Federal',
+                  text: Locale.public3,
                   height: 80,
                   width: 200,
                   onTap: () {

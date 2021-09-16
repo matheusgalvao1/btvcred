@@ -13,7 +13,7 @@ class InputCpf extends StatelessWidget {
           Row(
             children: [
               Text(
-                'Seu CPF:',
+                Locale.cpf,
                 style: Theme.of(context).textTheme.headline1.copyWith(
                       fontSize: 25,
                       fontWeight: FontWeight.w600,

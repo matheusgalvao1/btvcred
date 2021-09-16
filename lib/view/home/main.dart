@@ -5,6 +5,7 @@ import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
 import '../../components/Button.dart';
 import '../../utility/Pointer.dart';
+import '../../../utility/Locale.dart';
 import '../drawer/main.dart';
 
 part 'Body.dart';

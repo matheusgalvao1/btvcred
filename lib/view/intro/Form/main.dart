@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../bloc/Intro.dart';
 import '../../../components/Button.dart';
 import '../../../utility/Pointer.dart';
+import '../../../utility/Locale.dart';
 
 part 'InputCpf.dart';
 part 'ModalKnowMore.dart';
@@ -20,7 +21,7 @@ class InputForms extends StatelessWidget {
       physics: BouncingScrollPhysics(),
       children: [
         Text(
-          'Precisamos de algumas informações',
+          Locale.needInfo,
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.headline1.copyWith(
                 fontSize: 30,
@@ -29,6 +30,7 @@ class InputForms extends StatelessWidget {
         ),
         SizedBox(height: 10),
         InkWell(
+          highlightColor: Colors.transparent,
           onTap: () {
             ModalKnowMore().show(context);
           },
@@ -41,7 +43,7 @@ class InputForms extends StatelessWidget {
               ),
               SizedBox(width: 5),
               Text(
-                'Saiba mais',
+                Locale.knowMore,
                 style: Theme.of(context).textTheme.headline2.copyWith(
                       color: Theme.of(context).colorScheme.primary,
                       fontWeight: FontWeight.w600,
@@ -56,7 +58,7 @@ class InputForms extends StatelessWidget {
         //InputCpf(),
         SizedBox(height: 40),
         MyButton(
-          text: 'Continuar',
+          text: Locale.next,
           height: 80,
           onTap: () {
             bloc.FinishRegister();

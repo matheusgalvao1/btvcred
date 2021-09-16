@@ -1,4 +1,3 @@
-import 'package:btvcred/utility/Pointer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +7,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 import '../../../bloc/Contact.dart';
 import '../../../bloc/Simulator.dart';
 import '../../../components/ButtonIcon.dart';
+import '../../../utility/Locale.dart';
 import '../simulator/main.dart';
 
 part 'Contact.dart';
@@ -30,7 +30,7 @@ class Result extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Resultado:',
+                    Locale.result,
                     style: Theme.of(context).textTheme.headline1.copyWith(
                           fontWeight: FontWeight.w600,
                           fontSize: 25,
@@ -44,7 +44,7 @@ class Result extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    bloc.simulation.months.toString() + ' parcelas de',
+                    bloc.simulation.months.toString() + ' ' + Locale.monthsOf,
                     style: Theme.of(context).textTheme.headline1.copyWith(
                           fontWeight: FontWeight.w600,
                           fontSize: 25,
@@ -89,7 +89,7 @@ class Result extends StatelessWidget {
                     ),
                     SizedBox(width: 10),
                     Text(
-                      'Voltar para tela inicial',
+                      Locale.backHome,
                       style: Theme.of(context).textTheme.headline2.copyWith(
                             fontWeight: FontWeight.w500,
                             color: Theme.of(context).colorScheme.primary,

@@ -5,6 +5,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 
 import '../../components/Button.dart';
 import '../../components/ButtonOutlined.dart';
+import '../../../utility/Locale.dart';
 import '../../utility/Pointer.dart';
 
 part 'AboutUs.dart';
@@ -22,7 +23,7 @@ class MyDrawer extends StatelessWidget {
               height: MediaQuery.of(context).size.width * .3),
           SizedBox(height: 15),
           Text(
-            'BEM-TE-VI CRED',
+            Locale.btvName,
             style: Theme.of(context)
                 .textTheme
                 .headline1
@@ -30,21 +31,21 @@ class MyDrawer extends StatelessWidget {
           ),
           SizedBox(height: 30),
           ButtonOutlined(
-            text: 'Sobre nós',
+            text: Locale.aboutUs,
             onTap: () => ModalAboutUs().show(context),
             height: 60,
             //width: 100,
           ),
           SizedBox(height: 15),
           ButtonOutlined(
-            text: 'Localização',
+            text: Locale.location,
             onTap: () => ModalLocalization().show(context),
             height: 60,
             //width: 100,
           ),
           SizedBox(height: 15),
           ButtonOutlined(
-            text: 'Termo de Uso',
+            text: Locale.termOfUse,
             onTap: () => ModalTermsOfUse().show(context),
             height: 60,
             //width: 100,

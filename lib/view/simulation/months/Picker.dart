@@ -42,7 +42,7 @@ class _PickerState extends State<Picker> {
                     SizedBox(width: 5),
                     (index == bloc.listGeneric.length - 1)
                         ? Text(
-                            "Melhor\noferta",
+                            Locale.bestOffer,
                             textAlign: TextAlign.center,
                             style: Theme.of(context)
                                 .textTheme
@@ -64,7 +64,7 @@ class _PickerState extends State<Picker> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               MyButton(
-                text: 'Continuar',
+                text: Locale.next,
                 width: 150,
                 onTap: () {
                   bloc.setMonths();

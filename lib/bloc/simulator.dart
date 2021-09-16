@@ -6,6 +6,7 @@ import 'package:one_context/one_context.dart';
 import 'package:extended_masked_text/extended_masked_text.dart';
 
 import '../../model/Simulation.dart';
+import '../../../utility/Locale.dart';
 import '../../utility/Pointer.dart';
 
 class BlocSimulator extends BlocBase {
@@ -192,8 +193,8 @@ class BlocSimulator extends BlocBase {
     if (value == 0)
       CustomBar.showAlert(
         context: ctx,
-        title: 'Valor não pode ser 0',
-        message: 'Digite novamente',
+        title: Locale.notZero,
+        message: Locale.tryAgain,
       );
     else {
       await Future.delayed(Duration(milliseconds: 100));

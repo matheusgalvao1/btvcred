@@ -23,7 +23,7 @@ class TermsOfUse extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text(
-            'Termo de Uso',
+            Locale.termOfUse,
             style: Theme.of(context).textTheme.headline1.copyWith(fontWeight: FontWeight.w600),
           ),
           centerTitle: true,

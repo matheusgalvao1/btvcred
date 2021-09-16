@@ -4,6 +4,7 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 import '../../../bloc/Simulator.dart';
 import '../../../components/Button.dart';
 import '../../../components/ButtonOutlined.dart';
+import '../../../utility/Locale.dart';
 import '../../../utility/Pointer.dart';
 import '../simulator/main.dart';
 
@@ -30,7 +31,7 @@ class Type extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Em qual opção você se encaixa?',
+                    Locale.typeText,
                     style: Theme.of(context).textTheme.headline1.copyWith(
                           fontWeight: FontWeight.w600,
                           fontSize: 25,
@@ -41,7 +42,7 @@ class Type extends StatelessWidget {
             ),
             SizedBox(height: MediaQuery.of(context).size.height * .1),
             MyButton(
-              text: 'Aposentado INSS',
+              text: Locale.retiredINSS,
               width: 150,
               height: 60,
               onTap: () {
@@ -51,7 +52,7 @@ class Type extends StatelessWidget {
             ),
             SizedBox(height: 20),
             MyButton(
-              text: 'Pensionista INSS',
+              text: Locale.pensionINSS,
               width: 150,
               height: 60,
               onTap: () {
@@ -61,14 +62,14 @@ class Type extends StatelessWidget {
             ),
             SizedBox(height: 20),
             MyButton(
-              text: 'Funcionário Público',
+              text: Locale.publicEmployee,
               width: 150,
               height: 60,
               onTap: () => Modal.showModal(context),
             ),
             SizedBox(height: 20),
             MyButton(
-              text: 'Militar',
+              text: Locale.military,
               width: 150,
               height: 60,
               onTap: () => ModalMilitary.showModal(context),

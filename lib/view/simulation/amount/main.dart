@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../bloc/Simulator.dart';
 import '../simulator/main.dart';
+import '../../../utility/Locale.dart';
 
 part 'Input.dart';
 
@@ -28,7 +29,7 @@ class Amount extends StatelessWidget {
         shrinkWrap: true,
         children: [
           Text(
-            'Valor do empréstimo',
+            Locale.amount,
             style: Theme.of(context)
                 .textTheme
                 .headline1
@@ -41,7 +42,7 @@ class Amount extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               MyButton(
-                text: "Continuar",
+                text: Locale.next,
                 width: 150,
                 onTap: () async {
                   bloc.inputFocus.unfocus();

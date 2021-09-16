@@ -22,7 +22,7 @@ class Term extends StatelessWidget {
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 Text(
-                  "Termo de Uso",
+                  Locale.termOfUse,
                   style: Theme.of(context).textTheme.headline1.copyWith(
                         fontSize: MediaQuery.of(context).size.width*.08,
                         color: Theme.of(context).colorScheme.primary,
@@ -45,7 +45,7 @@ class Term extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Center(
               child: MyButton(
-                text: 'Li e Concordo',
+                text: Locale.agree,
                 height: 80,
                 onTap: () => bloc.agree(),
               ),

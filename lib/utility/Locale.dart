@@ -58,5 +58,61 @@ class Locale {
       update04 = 'Agora Não',
       update05 = 'Desenvolvido por Websix',
       update06 = 'Versão atual: ',
-      update07 = 'http://websix.com.br';
+      update07 = 'http://websix.com.br',
+
+      // Termo de Uso
+      termOfUse = 'Termo de Uso',
+      agree = 'Li e Concordo',
+
+      // Botoes
+      next = 'Continuar',
+      backHome = 'Voltar para tela inicial',
+      aboutUs = 'Sobre Nós',
+      fgts = 'Saque FGTS',
+      knowMore = 'Saiba mais',
+      loan = 'Empréstimo Consignado',
+      location = 'Localização',
+      maps = 'Ver no Google Maps',
+      retiredINSS = 'Aposentado INSS',
+      pensionINSS = 'Pensionista INSS',
+      publicEmployee = 'Funcionário Público',
+      public1 = 'Municipal',
+      public2 = 'Estadual',
+      public3 = 'Federal',
+      military = 'Militar',
+      military1 = 'Exército',
+      military2 = 'Marinha',
+      military3 = 'Aeronáutica',
+      hintFGTS = 'Clique aqui para saber como funciona',
+
+      // Titulos
+      needInfo = 'Precisamos de algumas informações',
+      simulations = 'Simulações',
+      typeText = 'Em qual opção você se encaixa?',
+      typeEmployee = 'Tipo de Funcionário',
+      typeMilitary = 'Tipo de Militar',
+      amount = 'Valor do empréstimo:',
+      howManyMonths = 'Quantas parcelas?',
+      rollHint = 'Gire a roleta para escolher',
+      result = 'Resultado:',
+      monthsOf = 'parcelas de',
+      contact = 'Contate nossos atendentes',
+      amountFGTS = 'Quanto você tem de saldo no FGTS?',
+      cpf = 'Seu CPF:',
+      email = 'Seu Email:',
+      howItWorks = 'Como Funciona',
+
+      // Alerts
+      notZero = 'Valor não pode ser 0',
+      tryAgain = 'Digite novamente',
+      insufficient = 'Saldo insuficiente',
+      atLeast = 'Deve ser pelo menos',
+
+
+      // Infos
+      btvName = 'BEM-TE-VI CRED',
+      bestOffer = 'Melhor\noferta',
+      whatsApp = 'WhatsApp',
+      call = 'Ligação';
+
 }

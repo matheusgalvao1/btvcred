@@ -25,7 +25,7 @@ class ModalMilitary {
             child: Column(
               children: [
                 Text(
-                  'Tipo de Militar',
+                  Locale.typeMilitary,
                   style: Theme.of(context).textTheme.headline1.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
@@ -37,7 +37,7 @@ class ModalMilitary {
                 ),
                 SizedBox(height: 10),
                 ButtonOutlined(
-                  text: 'Exército',
+                  text: Locale.military1,
                   height: 80,
                   width: 200,
                   onTap: () {
@@ -48,7 +48,7 @@ class ModalMilitary {
                 ),
                 SizedBox(height: 15),
                 ButtonOutlined(
-                  text: 'Marinha',
+                  text: Locale.military2,
                   height: 80,
                   width: 200,
                   onTap: () {
@@ -59,7 +59,7 @@ class ModalMilitary {
                 ),
                 SizedBox(height: 15),
                 ButtonOutlined(
-                  text: 'Aeronáutica',
+                  text: Locale.military3,
                   height: 80,
                   width: 200,
                   onTap: () {

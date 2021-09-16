@@ -14,7 +14,7 @@ class Contact extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      'Contate nossos atendentes:',
+                      Locale.contact,
                       style: Theme.of(context).textTheme.headline1.copyWith(
                             fontWeight: FontWeight.w600,
                           ),
@@ -25,14 +25,14 @@ class Contact extends StatelessWidget {
               SizedBox(height: 15),
               ButtonWithIcon(
                 onTap: () => bloc.sendWhatsApp(),
-                text: 'WhatsApp',
+                text: Locale.whatsApp,
                 icon: CommunityMaterialIcons.whatsapp,
                 iconColor: Theme.of(context).colorScheme.primary,
               ),
               SizedBox(height: 15),
               ButtonWithIcon(
                 onTap: () => bloc.callPhone(),
-                text: 'Ligação',
+                text: Locale.call,
                 icon: CupertinoIcons.phone,
                 iconColor: Theme.of(context).colorScheme.primary,
               ),

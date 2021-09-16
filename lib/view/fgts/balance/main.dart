@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../bloc/FgtsSimulator.dart';
 import '../../../components/Button.dart';
 import '../../../utility/Pointer.dart';
+import '../../../utility/Locale.dart';
 
 part 'Input.dart';
 part 'ModalInfo.dart';
@@ -63,7 +64,7 @@ class Balance extends StatelessWidget {
                 SizedBox(width: 5),
                 Expanded(
                   child: Text(
-                    'Clique aqui para saber como funciona',
+                    Locale.hintFGTS,
                     style: Theme.of(context).textTheme.headline3.copyWith(
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).colorScheme.primary,
@@ -76,7 +77,7 @@ class Balance extends StatelessWidget {
           ),
           SizedBox(height: 15),
           Text(
-            'Quanto você tem de saldo no FGTS?',
+            Locale.amountFGTS,
             style: Theme.of(context)
                 .textTheme
                 .headline1
@@ -89,7 +90,7 @@ class Balance extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               MyButton(
-                text: "Continuar",
+                text: Locale.next,
                 width: 150,
                 onTap: () => bloc.validateInput(context),
               ),

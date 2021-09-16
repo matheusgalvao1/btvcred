@@ -5,6 +5,7 @@ import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
 
 import '../components/CustomBar.dart';
+import '../../../utility/Locale.dart';
 import '../utility/Pointer.dart';
 
 class BlocFgtsSimulator extends BlocBase {
@@ -60,8 +61,8 @@ class BlocFgtsSimulator extends BlocBase {
     if (amountController.numberValue < config.app.saldoMinFGTS)
       CustomBar.showAlert(
         context: ctx,
-        title: 'Saldo insuficiente',
-        message: 'Deve ser pelo menos R\$ ' + saldoMin.toString() + ',00',
+        title: Locale.insufficient,
+        message: Locale.atLeast + ' R\$ ' + saldoMin.toString() + ',00',
       );
     else {
       setBalance();

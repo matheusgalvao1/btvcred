@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../bloc/Simulator.dart';
 import '../../../components/Button.dart';
-import '../../../utility/Pointer.dart';
+import '../../../utility/Locale.dart';
 import '../simulator/main.dart';
 
 part 'Picker.dart';
@@ -28,7 +28,7 @@ class Months extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        'Quantas parcelas?',
+                        Locale.howManyMonths,
                         style: Theme.of(context).textTheme.headline1.copyWith(
                               fontWeight: FontWeight.w600,
                               fontSize: 25,
@@ -48,7 +48,7 @@ class Months extends StatelessWidget {
                     ),
                     SizedBox(width: 5),
                     Text(
-                      'Gire a roleta para escolher',
+                      Locale.rollHint,
                       style: Theme.of(context).textTheme.headline1.copyWith(
                             fontWeight: FontWeight.w600,
                             fontSize: 15,

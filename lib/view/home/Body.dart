@@ -14,7 +14,7 @@ class HomeBody extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  'Simulações',
+                  Locale.simulations,
                   style: Theme.of(context).textTheme.headline1.copyWith(
                         fontWeight: FontWeight.w600,
                         fontSize: 25,
@@ -26,7 +26,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(height: 15),
           //SizedBox(height: MediaQuery.of(context).size.height * .2),
           MyButton(
-            text: 'Empréstimo Consignado',
+            text: Locale.loan,
             width: 150,
             height: 80,
             onTap: () {
@@ -37,7 +37,7 @@ class HomeBody extends StatelessWidget {
           SizedBox(height: 20),
           config.app.showFGTS
               ? MyButton(
-                  text: 'Saque FGTS',
+                  text: Locale.fgts,
                   width: 150,
                   height: 80,
                   onTap: () => Navigator.pushNamed(context, '/fgts'),
