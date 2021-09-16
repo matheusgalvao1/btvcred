@@ -16,6 +16,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SliderMenuContainer(
+        appBarPadding: EdgeInsets.only(top: 30),
         appBarColor: Theme.of(context).colorScheme.background,
         title: null,
         drawerIconColor: Theme.of(context).colorScheme.primary,
