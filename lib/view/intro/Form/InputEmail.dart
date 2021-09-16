@@ -1,7 +1,7 @@
 part of 'main.dart';
 
-class InputCpf extends StatelessWidget {
-  InputCpf(this.bloc);
+class InputEmail extends StatelessWidget {
+  InputEmail(this.bloc);
 
   final BlocIntro bloc;
 
@@ -13,7 +13,7 @@ class InputCpf extends StatelessWidget {
           Row(
             children: [
               Text(
-                Locale.cpf,
+                Locale.email,
                 style: Theme.of(context).textTheme.headline1.copyWith(
                       fontSize: 25,
                       fontWeight: FontWeight.w600,
@@ -23,18 +23,19 @@ class InputCpf extends StatelessWidget {
           ),
           SizedBox(height: 5),
           TextField(
-            controller: bloc.cpfController,
+            //controller: bloc.cpfController,
             cursorRadius: Radius.circular(100),
             //focusNode: bloc.inputFocus,
-            keyboardType: TextInputType.number,
+            keyboardType: TextInputType.emailAddress,
             onSubmitted: (String text) {},
-            style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 30),
+            style: Theme.of(context).textTheme.headline1,
             decoration: InputDecoration(
               border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                  borderSide: BorderSide(
-                    color: Colors.white,
-                  )),
+                borderRadius: BorderRadius.circular(15),
+                borderSide: BorderSide(
+                  color: Colors.white,
+                ),
+              ),
               enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                   color: Theme.of(context).colorScheme.primary,

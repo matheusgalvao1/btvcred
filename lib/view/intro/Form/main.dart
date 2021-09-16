@@ -7,6 +7,7 @@ import '../../../utility/Pointer.dart';
 import '../../../utility/Locale.dart';
 
 part 'InputCpf.dart';
+part 'InputEmail.dart';
 part 'ModalKnowMore.dart';
 
 class InputForms extends StatelessWidget {
@@ -54,8 +55,8 @@ class InputForms extends StatelessWidget {
         ),
         SizedBox(height: 40),
         InputCpf(bloc),
-        //SizedBox(height: 20),
-        //InputCpf(),
+        SizedBox(height: 20),
+        InputEmail(bloc),
         SizedBox(height: 40),
         MyButton(
           text: Locale.next,
