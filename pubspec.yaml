@@ -24,6 +24,7 @@ dependencies:
   flutter_svg: ^0.21.0+1
   google_fonts: ^1.1.0
   numberpicker: ^2.1.1
+  nuts_activity_indicator: ^0.1.1
   one_context: ^1.1.0
   page_transition: ^1.1.7+6
   path_provider: ^2.0.1

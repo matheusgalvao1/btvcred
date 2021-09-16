@@ -11,8 +11,6 @@ class BlocIntro extends BlocBase {
 
   FocusNode cpfFocus = FocusNode();
 
-  int cPage = 0;
-
   void agree() {
     nextPage();
   }
@@ -22,11 +20,12 @@ class BlocIntro extends BlocBase {
       duration: const Duration(milliseconds: 600),
       curve: Curves.fastOutSlowIn,
     );
-    cPage++;
     notifyListeners();
   }
 
   Future<void> FinishRegister() async {
+    nextPage();
+    await Future.delayed(Duration(milliseconds: 2000));
     await FunctionCache.redirectTo('/home');
   }
 }
