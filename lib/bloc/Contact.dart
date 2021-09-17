@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:btvcred/components/CustomBar.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -7,18 +8,22 @@ import '../utility/Pointer.dart';
 
 class BlocContact extends BlocBase {
   String phoneNumber = config.app.whatsApp;
-  String message = "teste";
+  String message = "*Simulação de empréstimo*\nValor: ";
 
-  void sendWhatsApp() async {
-    var whatsAppURl =
-        "whatsapp://send?phone=" + formatPhone() + "text=$message";
-
-    await launch(whatsAppURl);
+  void sendWhatsApp(BuildContext context) async {
+    var whatsAppUrl = "whatsapp://send?phone=" + formatPhone() + "&text=" + formatMessage();
+    //if (await canLaunch(whatsAppUrl)) {
+      await launch(whatsAppUrl);
+    //} else {
+    //   CustomBar.showAlert(
+    //       title: 'Ops!',
+    //       message: 'Verifique se você possui o WhatsApp instalado',
+    //       context: context);
+    // }
   }
 
-    void openWhatsApp() async {
-    var whatsAppURl =
-        "whatsapp://send?phone=" + formatPhone();
+  void openWhatsApp() async {
+    var whatsAppURl = "whatsapp://send?phone=" + formatPhone();
 
     await launch(whatsAppURl);
   }
@@ -28,14 +33,20 @@ class BlocContact extends BlocBase {
   }
 
   String formatPhone() {
-    return '55' + phoneNumber.replaceAll(' ', '').replaceAll('-', '');
+    return '+55' + phoneNumber.replaceAll(' ', '').replaceAll('-', '');
+  }
+
+  String formatMessage() {
+    String valorTxt = 'Valor: *R\$ ' + blocSimulator.simulation.amount.toStringAsFixed(2) + '*';
+    String parcelasTxt = 'Parcelas: *' + blocSimulator.simulation.months.toString() + 'x*';
+    String cpf = blocUser.user.cpf == null ? '' : 'CPF: *' + blocUser.user.cpf + '*';
+    return '*Simulação de empréstimo*\n' + valorTxt + '\n' + parcelasTxt + '\n' + cpf;
   }
 
   Future<void> openMap() async {
-      String query = Uri.encodeComponent(config.app.endereco);
-      String googleUrl = "https://www.google.com/maps/search/?api=1&query=$query";
+    String query = Uri.encodeComponent(config.app.endereco);
+    String googleUrl = "https://www.google.com/maps/search/?api=1&query=$query";
 
-      await launch(googleUrl);
-
+    await launch(googleUrl);
   }
 }

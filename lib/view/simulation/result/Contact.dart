@@ -24,7 +24,7 @@ class Contact extends StatelessWidget {
               ),
               SizedBox(height: 15),
               ButtonWithIcon(
-                onTap: () => bloc.sendWhatsApp(),
+                onTap: () => bloc.sendWhatsApp(context),
                 text: Locale.whatsApp,
                 icon: CommunityMaterialIcons.whatsapp,
                 iconColor: Theme.of(context).colorScheme.primary,
