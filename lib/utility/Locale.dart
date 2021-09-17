@@ -107,6 +107,7 @@ class Locale {
       tryAgain = 'Digite novamente',
       insufficient = 'Saldo insuficiente',
       atLeast = 'Deve ser pelo menos',
+      
 
 
       // Infos

@@ -15,6 +15,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     blocUser.init();
     return Scaffold(
+      floatingActionButton:
+          FloatingActionButton(onPressed: () => print(config.app.valorMin)),
       body: SliderMenuContainer(
         appBarPadding: EdgeInsets.only(top: 30),
         appBarColor: Theme.of(context).colorScheme.background,

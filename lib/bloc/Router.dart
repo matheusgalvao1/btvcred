@@ -42,6 +42,7 @@ class BlocRouter extends BlocBase {
           parcelasMarinha: _map['config_app']['parcelasMarinha'] as Map<String, dynamic>,
           saibaMaisRegister: _map['config_app']['saibaMaisRegister'] as String,
           saldoMinFGTS: _map['config_app']['saldoMinFGTS'] as int,
+          valorMin: _map['config_app']['valorMin'] as int,
           showFGTS: _map['config_app']['showFGTS'] as bool,
           sobreNos: _map['config_app']['sobreNos'] as String,
           termo: _map['config_app']['termo'] as String,

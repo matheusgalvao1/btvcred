@@ -23,10 +23,12 @@ class ConfigAPP {
     @required this.comoFuncionaFGTS,
     @required this.parcelasMarinha,
     @required this.parcelasExercito,
-    @required this.parcelasAeronautica
+    @required this.parcelasAeronautica,
+    @required this.valorMin,
   });
 
   final bool showFGTS;
+  final int valorMin;
   final int saldoMinFGTS;
   final String endereco;
   final String sobreNos;

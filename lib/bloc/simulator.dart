@@ -1,10 +1,10 @@
-import 'package:btvcred/components/CustomBar.dart';
 import 'package:flutter/material.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:one_context/one_context.dart';
 import 'package:extended_masked_text/extended_masked_text.dart';
 
+import '../../components/CustomBar.dart';
 import '../../model/Simulation.dart';
 import '../../../utility/Locale.dart';
 import '../../utility/Pointer.dart';
@@ -72,13 +72,15 @@ class BlocSimulator extends BlocBase {
         auxCalculate = config.app.parcelasFed[simulation.months.toString()];
         break;
       case 'Exer':
-        auxCalculate = config.app.parcelasExercito[simulation.months.toString()];
+        auxCalculate =
+            config.app.parcelasExercito[simulation.months.toString()];
         break;
       case 'Mar':
         auxCalculate = config.app.parcelasMarinha[simulation.months.toString()];
         break;
       case 'Aero':
-        auxCalculate = config.app.parcelasAeronautica[simulation.months.toString()];
+        auxCalculate =
+            config.app.parcelasAeronautica[simulation.months.toString()];
         break;
     }
     print(auxCalculate);
@@ -112,7 +114,8 @@ class BlocSimulator extends BlocBase {
       default:
         listGeneric = parcelasInss;
     }
-    pickerController = FixedExtentScrollController(initialItem: listGeneric.length-1);
+    pickerController =
+        FixedExtentScrollController(initialItem: listGeneric.length - 1);
     notifyListeners();
   }
 
@@ -196,7 +199,13 @@ class BlocSimulator extends BlocBase {
         title: Locale.notZero,
         message: Locale.tryAgain,
       );
-    else {
+    else if (value < config.app.valorMin) {
+      CustomBar.showAlert(
+        context: ctx,
+        title: Locale.insufficient,
+        message: Locale.atLeast + ' R\$ ' + config.app.valorMin.toString() + ',00',
+      );
+    } else {
       await Future.delayed(Duration(milliseconds: 100));
       setAmount(value);
       nextPage();
