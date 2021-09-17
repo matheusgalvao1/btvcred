@@ -14,7 +14,7 @@ class ModalMilitary {
       builder: (context) => Consumer<BlocSimulator>(
         builder: (context, bloc) {
           return Container(
-            height: 370,
+            height: 310,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.background,
               borderRadius: BorderRadius.vertical(
@@ -38,7 +38,7 @@ class ModalMilitary {
                 SizedBox(height: 10),
                 ButtonOutlined(
                   text: Locale.military1,
-                  height: 80,
+                  height: 60,
                   width: 200,
                   onTap: () {
                     blocSimulator.setUserType('Exer');
@@ -49,7 +49,7 @@ class ModalMilitary {
                 SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.military2,
-                  height: 80,
+                  height: 60,
                   width: 200,
                   onTap: () {
                     blocSimulator.setUserType('Mar');
@@ -60,7 +60,7 @@ class ModalMilitary {
                 SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.military3,
-                  height: 80,
+                  height: 60,
                   width: 200,
                   onTap: () {
                     blocSimulator.setUserType('Aero');

@@ -28,7 +28,7 @@ class HomeBody extends StatelessWidget {
           MyButton(
             text: Locale.loan,
             width: 150,
-            height: 80,
+            height: 60,
             onTap: () {
               blocSimulator.reset();
               Navigator.pushNamed(context, '/simulator');
@@ -39,7 +39,7 @@ class HomeBody extends StatelessWidget {
               ? MyButton(
                   text: Locale.fgts,
                   width: 150,
-                  height: 80,
+                  height: 60,
                   onTap: () => Navigator.pushNamed(context, '/fgts'),
                 )
               : SizedBox(),

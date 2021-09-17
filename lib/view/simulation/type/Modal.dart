@@ -14,7 +14,7 @@ class Modal {
       builder: (context) => Consumer<BlocSimulator>(
         builder: (context, bloc) {
           return Container(
-            height: 370,
+            height: 310,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.background,
               borderRadius: BorderRadius.vertical(
@@ -38,7 +38,7 @@ class Modal {
                 SizedBox(height: 10),
                 ButtonOutlined(
                   text: Locale.public1,
-                  height: 80,
+                  height: 60,
                   width: 200,
                   onTap: () {
                     blocSimulator.setUserType('M');
@@ -49,7 +49,7 @@ class Modal {
                 SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.public2,
-                  height: 80,
+                  height: 60,
                   width: 200,
                   onTap: () {
                     blocSimulator.setUserType('E');
@@ -60,7 +60,7 @@ class Modal {
                 SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.public3,
-                  height: 80,
+                  height: 60,
                   width: 200,
                   onTap: () {
                     blocSimulator.setUserType('F');
