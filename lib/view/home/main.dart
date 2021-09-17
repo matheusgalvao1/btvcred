@@ -1,3 +1,5 @@
+import 'package:btvcred/components/CustomBar.dart';
+import 'package:btvcred/components/CustomBarIcon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +15,24 @@ part 'Body.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    blocUser.init();
+    blocUser.init(context);
     return Scaffold(
-      floatingActionButton:
-          FloatingActionButton(onPressed: () => print(config.app.valorMin)),
+      //floatingActionButton: FloatingActionButton(
+      //   onPressed: () async {
+      //     CustomBarIcon.showAlert(
+      //       title: 'Localização',
+      //       message: 'Por favor compartilhe sua localização',
+      //       icon: Icon(
+      //         Icons.location_pin,
+      //         size: 40,
+      //         color: Colors.white,
+      //       ),
+      //       context: context,
+      //     );
+      //     await blocUser.getCurrentPosition();
+      //     print(blocUser.user.location.latitude);
+      //   },
+      // ),
       body: SliderMenuContainer(
         appBarPadding: EdgeInsets.only(top: 30),
         appBarColor: Theme.of(context).colorScheme.background,

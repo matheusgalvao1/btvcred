@@ -1,12 +1,12 @@
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
-class CustomBar {
-
+class CustomBarIcon {
   static Future<void> showAlert({
     @required String title,
     @required String message,
     @required BuildContext context,
+    @required Icon icon,
     bool error = false,
   }) {
     return Flushbar<dynamic>(
@@ -16,6 +16,7 @@ class CustomBar {
       flushbarStyle: FlushbarStyle.GROUNDED,
       message: message,
       title: title,
+      icon: icon,
     ).show(context);
   }
 }

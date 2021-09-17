@@ -1,13 +1,26 @@
+import 'package:flutter/material.dart';
+
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:geolocator/geolocator.dart';
 
-import 'package:btvcred/model/User.dart';
+import '../../components/CustomBarIcon.dart';
+import '../../model/User.dart';
 
 class BlocUser extends BlocBase {
   ModelUser user = ModelUser();
 
-  void init() async {
+  void init(BuildContext context) async {
     if (user.location.latitude == null || user.location.longitude == null) {
+      // CustomBarIcon.showAlert(
+      //   title: 'Localização',
+      //   message: 'Por favor compartilhe sua localização',
+      //   icon: Icon(
+      //     Icons.location_pin,
+      //     size: 40,
+      //     color: Colors.white,
+      //   ),
+      //   context: context,
+      // );
       await getCurrentPosition();
     }
   }
@@ -15,8 +28,7 @@ class BlocUser extends BlocBase {
   Future<void> getCurrentPosition() async {
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
-    if(position != null)
-      setLocation(position.latitude, position.longitude);
+    if (position != null) setLocation(position.latitude, position.longitude);
   }
 
   void setLocation(double lat, double long) {
