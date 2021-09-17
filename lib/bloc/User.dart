@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:geocoder/geocoder.dart';
 import 'package:geolocator/geolocator.dart';
 
 import '../../components/CustomBarIcon.dart';
@@ -8,6 +9,7 @@ import '../../model/User.dart';
 
 class BlocUser extends BlocBase {
   ModelUser user = ModelUser();
+  String address;
 
   void init(BuildContext context) async {
     if (user.location.latitude == null || user.location.longitude == null) {
@@ -31,10 +33,16 @@ class BlocUser extends BlocBase {
     if (position != null) setLocation(position.latitude, position.longitude);
   }
 
-  void setLocation(double lat, double long) {
+  Future<void> setLocation(double lat, double long) async {
     if (lat != null && long != null) {
+      Address address = (await Geocoder.local
+          .findAddressesFromCoordinates(Coordinates(lat, long)))[0];
       user.location.latitude = lat;
       user.location.longitude = long;
+      user.location.bairro = address.subLocality;
+      user.location.cidade = address.subAdminArea;
+      user.location.estado = address.adminArea;
+      user.location.country = address.countryName;
     }
   }
 

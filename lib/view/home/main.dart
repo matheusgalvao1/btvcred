@@ -17,20 +17,20 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     blocUser.init(context);
     return Scaffold(
-      //floatingActionButton: FloatingActionButton(
+      // floatingActionButton: FloatingActionButton(
       //   onPressed: () async {
-      //     CustomBarIcon.showAlert(
-      //       title: 'Localização',
-      //       message: 'Por favor compartilhe sua localização',
-      //       icon: Icon(
-      //         Icons.location_pin,
-      //         size: 40,
-      //         color: Colors.white,
-      //       ),
-      //       context: context,
-      //     );
+      //     // CustomBarIcon.showAlert(
+      //     //   title: 'Localização',
+      //     //   message: 'Por favor compartilhe sua localização',
+      //     //   icon: Icon(
+      //     //     Icons.location_pin,
+      //     //     size: 40,
+      //     //     color: Colors.white,
+      //     //   ),
+      //     //   context: context,
+      //     // );
       //     await blocUser.getCurrentPosition();
-      //     print(blocUser.user.location.latitude);
+      //     print(blocUser.user.location.toString());
       //   },
       // ),
       body: SliderMenuContainer(
