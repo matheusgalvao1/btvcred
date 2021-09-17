@@ -14,13 +14,12 @@ class Router extends StatelessWidget {
         color: Theme.of(context).colorScheme.onSecondary,
         child: SplashScreen.callback(
           name: 'lib/assets/animations/btv.flr',
-          onSuccess: (dynamic e) {
+          onSuccess: (dynamic e) async {
             OneContext().pushNamedAndRemoveUntil(
-              '/intro',//bloc.navigator,
+              bloc.navigator,
               (_) => false,
             );
           },
-
           backgroundColor: Theme.of(context).colorScheme.background,
           onError: (dynamic error, dynamic stacktrace) {},
           until: () => bloc.init(),

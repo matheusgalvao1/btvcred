@@ -38,8 +38,8 @@ class Locale {
       maintenance = 'Em manutenção',
       maintenanceAction = 'Tente Novamente',
       maintenanceText = 'Nossos sistemas estão em manutenção no momento, estamos trabalhando para tornar sua experiência cada vez melhor. Por favor volte mais tarde',
-      offlineTitle = 'Sem conexão',
-      offlineText = 'Precisamos conectar aos nossos sistemas, verifique se a conexão está ativa ou tente novamente em alguns minutos',
+      offlineTitle = 'Sem Internet',
+      offlineText = 'Precisamos conectar aos nossos sistemas, verifique se a internet está ativa',
       
       // register
       register01 = 'Não tem uma conta?',
