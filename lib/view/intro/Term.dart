@@ -14,22 +14,27 @@ class Term extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(
                   CommunityMaterialIcons.book_account,
-                  size: MediaQuery.of(context).size.width*.1,
+                  size: MediaQuery.of(context).size.width * .2,
                   color: Theme.of(context).colorScheme.primary,
                 ),
                 Text(
                   Locale.termOfUse,
                   style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: MediaQuery.of(context).size.width*.08,
+                        fontSize: MediaQuery.of(context).size.width * .08,
                         color: Theme.of(context).colorScheme.primary,
                         fontWeight: FontWeight.w600,
                       ),
                 ),
               ],
+            ),
+            SizedBox(height: 15),
+            Divider(
+              color: Theme.of(context).colorScheme.primary,
+              thickness: 2,
             ),
             SizedBox(height: 30),
             Text(
