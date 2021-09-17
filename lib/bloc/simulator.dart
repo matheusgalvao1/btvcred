@@ -119,6 +119,34 @@ class BlocSimulator extends BlocBase {
     notifyListeners();
   }
 
+  String formatType() {
+    switch (simulation.type) {
+      case 'INSS':
+        return 'INSS';
+        break;
+      case 'M':
+        return 'Funcionário ' + Locale.public1;
+        break;
+      case 'E':
+        return 'Funcionário ' + Locale.public2;
+        break;
+      case 'F':
+        return 'Funcionário ' + Locale.public3;
+        break;
+      case 'Exer':
+        return Locale.military1;
+        break;
+      case 'Mar':
+        return Locale.military2;
+        break;
+      case 'Aero':
+        return Locale.military3;
+        break;
+      default:
+        return ' ';
+    }
+  }
+
   void nextPage() {
     if (cPage < 3) {
       pageController.nextPage(

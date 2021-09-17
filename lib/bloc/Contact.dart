@@ -39,8 +39,10 @@ class BlocContact extends BlocBase {
   String formatMessage() {
     String valorTxt = 'Valor: *R\$ ' + blocSimulator.simulation.amount.toStringAsFixed(2) + '*';
     String parcelasTxt = 'Parcelas: *' + blocSimulator.simulation.months.toString() + 'x*';
-    String cpf = blocUser.user.cpf == null ? '' : 'CPF: *' + blocUser.user.cpf + '*';
-    return '*Simulação de empréstimo*\n' + valorTxt + '\n' + parcelasTxt + '\n' + cpf;
+    String valorParcelaTxt = 'Valor da parcela: *R\$ ' + blocSimulator.simulation.result.toStringAsFixed(2) + '*';
+    String cpfTxt = blocUser.user.cpf == null ? '' : 'CPF: *' + blocUser.user.cpf + '*';
+    String tipoTxt = 'Para *' + blocSimulator.formatType() + '*';
+    return '*Simulação de Empréstimo*\n' + '\n' + tipoTxt  + '\n' + valorTxt + '\n' + parcelasTxt + '\n' + valorParcelaTxt + '\n' + cpfTxt;
   }
 
   Future<void> openMap() async {
