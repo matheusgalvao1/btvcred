@@ -46,7 +46,7 @@ class Term extends StatelessWidget {
             child: Center(
               child: MyButton(
                 text: Locale.agree,
-                height: 80,
+                height: 60,
                 onTap: () => bloc.agree(),
               ),
             ),

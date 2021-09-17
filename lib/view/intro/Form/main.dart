@@ -60,7 +60,7 @@ class InputForms extends StatelessWidget {
         SizedBox(height: 40),
         MyButton(
           text: Locale.next,
-          height: 80,
+          height: 60,
           onTap: () async {
             await bloc.validate(context);
           },
