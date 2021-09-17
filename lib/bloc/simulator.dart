@@ -202,7 +202,7 @@ class BlocSimulator extends BlocBase {
     else if (value < config.app.valorMin) {
       CustomBar.showAlert(
         context: ctx,
-        title: Locale.insufficient,
+        title: Locale.notEnough,
         message: Locale.atLeast + ' R\$ ' + config.app.valorMin.toString() + ',00',
       );
     } else {

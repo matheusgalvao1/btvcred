@@ -106,6 +106,7 @@ class Locale {
       notZero = 'Valor não pode ser 0',
       tryAgain = 'Digite novamente',
       insufficient = 'Saldo insuficiente',
+      notEnough = 'Muito pouco',
       atLeast = 'Deve ser pelo menos',
       
 
