@@ -10,8 +10,8 @@ class LoadingPage extends StatelessWidget {
         children: [
           Center(
             child: SvgPicture.asset(
-              'lib/assets/images/btv_contorno.svg',
-              height: 90,
+              'lib/assets/images/btv_cont.svg',
+              height: 60,
             ),
           ),
           Center(
