@@ -16,7 +16,7 @@ class Router extends StatelessWidget {
           name: 'lib/assets/animations/btv.flr',
           onSuccess: (dynamic e) async {
             OneContext().pushNamedAndRemoveUntil(
-              bloc.navigator,
+              '/intro',//bloc.navigator,
               (_) => false,
             );
           },

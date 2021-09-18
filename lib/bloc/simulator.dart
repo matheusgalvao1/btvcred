@@ -10,7 +10,10 @@ import '../../../utility/Locale.dart';
 import '../../utility/Pointer.dart';
 
 class BlocSimulator extends BlocBase {
-  bool showTotal = false;
+  bool
+      //
+      loading = false,
+      showTotal = false;
 
   PageController pageController = PageController();
 
@@ -39,10 +42,6 @@ class BlocSimulator extends BlocBase {
   List parcelasMarinha = config.app.parcelasMarinha.keys.toList();
   List parcelasAeronautica = config.app.parcelasAeronautica.keys.toList();
   List listGeneric = [];
-
-  void clear() {
-    //
-  }
 
   void reset() {
     cPage = 0;
@@ -147,6 +146,16 @@ class BlocSimulator extends BlocBase {
     }
   }
 
+  Future<void> goToResult() async {
+    setLoading(true); // LOADING
+    setMonths();
+    calculateResult();
+    setShowTotal(value: false);
+    nextPage();
+    await Future.delayed(Duration(milliseconds: 2000));
+    setLoading(false); // LOADING
+  }
+
   void nextPage() {
     if (cPage < 3) {
       pageController.nextPage(
@@ -220,6 +229,13 @@ class BlocSimulator extends BlocBase {
     }
   }
 
+  void setLoading(bool value) {
+    if (loading != value) {
+      loading = value;
+      notifyListeners();
+    }
+  }
+
   void validateInput(double value, BuildContext ctx) async {
     if (value == 0)
       CustomBar.showAlert(
@@ -231,7 +247,8 @@ class BlocSimulator extends BlocBase {
       CustomBar.showAlert(
         context: ctx,
         title: Locale.notEnough,
-        message: Locale.atLeast + ' R\$ ' + config.app.valorMin.toString() + ',00',
+        message:
+            Locale.atLeast + ' R\$ ' + config.app.valorMin.toString() + ',00',
       );
     } else {
       await Future.delayed(Duration(milliseconds: 100));

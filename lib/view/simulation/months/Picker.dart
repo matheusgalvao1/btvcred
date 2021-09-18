@@ -66,11 +66,8 @@ class _PickerState extends State<Picker> {
               MyButton(
                 text: Locale.next,
                 width: 150,
-                onTap: () {
-                  bloc.setMonths();
-                  bloc.calculateResult();
-                  bloc.setShowTotal(value: false);
-                  bloc.nextPage();
+                onTap: () async {
+                  bloc.goToResult();
                 },
               ),
             ],

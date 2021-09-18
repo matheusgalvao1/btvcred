@@ -1,6 +1,9 @@
-part of 'main.dart';
 
-class LoadingPage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nuts_activity_indicator/nuts_activity_indicator.dart';
+
+class MyLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
