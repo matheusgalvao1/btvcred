@@ -1,22 +1,22 @@
 part of 'main.dart';
 
-class ModalLocalization {
+class ModalLocation {
   void show(BuildContext context) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Localization();
+        return Location();
       },
     );
   }
 }
 
-class Localization extends StatelessWidget {
+class Location extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.transparent,
+        color: Colors.red,
       ),
       child: Scaffold(
         appBar: AppBar(
@@ -40,7 +40,7 @@ class Localization extends StatelessWidget {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.all(15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

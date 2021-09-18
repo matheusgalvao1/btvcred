@@ -9,7 +9,7 @@ import '../../../utility/Locale.dart';
 import '../../utility/Pointer.dart';
 
 part 'AboutUs.dart';
-part 'Localization.dart';
+part 'Location.dart';
 part 'TermsOfUse.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -39,7 +39,7 @@ class MyDrawer extends StatelessWidget {
           SizedBox(height: 15),
           ButtonOutlined(
             text: Locale.location,
-            onTap: () => ModalLocalization().show(context),
+            onTap: () => ModalLocation().show(context),
             height: 60,
             //width: 100,
           ),
