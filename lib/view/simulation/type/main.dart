@@ -21,61 +21,59 @@ class Type extends StatelessWidget {
     return Scaffold(
       floatingActionButton: Fab(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      body: Padding(
-        padding: EdgeInsets.all(30),
-        child: ListView(
-          physics: BouncingScrollPhysics(),
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(
-                  child: Text(
-                    Locale.typeText,
-                    style: Theme.of(context).textTheme.headline1.copyWith(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 25,
-                        ),
-                  ),
+      body: ListView(
+        padding: EdgeInsets.only(top: 0, bottom: 30, left: 30, right: 30),
+        physics: BouncingScrollPhysics(),
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Text(
+                  Locale.typeText,
+                  style: Theme.of(context).textTheme.headline1.copyWith(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 25,
+                      ),
                 ),
-              ],
-            ),
-            SizedBox(height: MediaQuery.of(context).size.height * .1),
-            MyButton(
-              text: Locale.retiredINSS,
-              width: 150,
-              height: 60,
-              onTap: () {
-                bloc.setUserType('INSS');
-                bloc.nextPage();
-              },
-            ),
-            SizedBox(height: 20),
-            MyButton(
-              text: Locale.pensionINSS,
-              width: 150,
-              height: 60,
-              onTap: () {
-                bloc.setUserType('INSS');
-                bloc.nextPage();
-              },
-            ),
-            SizedBox(height: 20),
-            MyButton(
-              text: Locale.publicEmployee,
-              width: 150,
-              height: 60,
-              onTap: () => Modal.showModal(context),
-            ),
-            SizedBox(height: 20),
-            MyButton(
-              text: Locale.military,
-              width: 150,
-              height: 60,
-              onTap: () => ModalMilitary.showModal(context),
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height * .1),
+          MyButton(
+            text: Locale.retiredINSS,
+            width: 150,
+            height: 60,
+            onTap: () {
+              bloc.setUserType('INSS');
+              bloc.nextPage();
+            },
+          ),
+          SizedBox(height: 15),
+          MyButton(
+            text: Locale.pensionINSS,
+            width: 150,
+            height: 60,
+            onTap: () {
+              bloc.setUserType('INSS');
+              bloc.nextPage();
+            },
+          ),
+          SizedBox(height: 15),
+          MyButton(
+            text: Locale.publicEmployee,
+            width: 150,
+            height: 60,
+            onTap: () => Modal.showModal(context),
+          ),
+          SizedBox(height: 15),
+          MyButton(
+            text: Locale.military,
+            width: 150,
+            height: 60,
+            onTap: () => ModalMilitary.showModal(context),
+          ),
+        ],
       ),
     );
   }

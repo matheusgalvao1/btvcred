@@ -14,7 +14,7 @@ class Modal {
       builder: (context) => Consumer<BlocSimulator>(
         builder: (context, bloc) {
           return Container(
-            height: 310,
+            height: 350,
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.background,
               borderRadius: BorderRadius.vertical(

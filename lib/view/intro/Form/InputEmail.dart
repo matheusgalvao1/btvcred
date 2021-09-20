@@ -15,7 +15,7 @@ class InputEmail extends StatelessWidget {
               Text(
                 Locale.email,
                 style: Theme.of(context).textTheme.headline1.copyWith(
-                      fontSize: 25,
+                      fontSize: MediaQuery.of(context).size.width*.07,
                       fontWeight: FontWeight.w600,
                     ),
               ),

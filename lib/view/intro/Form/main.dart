@@ -25,7 +25,7 @@ class InputForms extends StatelessWidget {
           Locale.needInfo,
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.headline1.copyWith(
-                fontSize: 30,
+                fontSize: MediaQuery.of(context).size.width * .08,
                 fontWeight: FontWeight.w600,
               ),
         ),
@@ -57,7 +57,9 @@ class InputForms extends StatelessWidget {
         InputCpf(bloc),
         SizedBox(height: 20),
         InputEmail(bloc),
-        SizedBox(height: 40),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * .05,
+        ),
         MyButton(
           text: Locale.next,
           height: 60,
@@ -65,7 +67,6 @@ class InputForms extends StatelessWidget {
             await bloc.validate(context);
           },
         ),
-
       ],
     );
   }

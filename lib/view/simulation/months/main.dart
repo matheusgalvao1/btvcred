@@ -18,48 +18,46 @@ class Months extends StatelessWidget {
       floatingActionButton: Fab(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       body: ListView(
+        padding: EdgeInsets.only(top: 0, bottom: 30, right: 30, left: 30),
         children: [
-          Padding(
-            padding: EdgeInsets.all(30),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Text(
-                        Locale.howManyMonths,
-                        style: Theme.of(context).textTheme.headline1.copyWith(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 25,
-                            ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      'lib/assets/icons/lightbulb.svg',
-                      color: Theme.of(context).colorScheme.primary,
-                      height: 40,
-                    ),
-                    SizedBox(width: 5),
-                    Text(
-                      Locale.rollHint,
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Text(
+                      Locale.howManyMonths,
                       style: Theme.of(context).textTheme.headline1.copyWith(
                             fontWeight: FontWeight.w600,
-                            fontSize: 15,
+                            fontSize: 25,
                           ),
                     ),
-                  ],
-                ),
-                SizedBox(height: 10),
-                Picker(),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    'lib/assets/icons/lightbulb.svg',
+                    color: Theme.of(context).colorScheme.primary,
+                    height: 40,
+                  ),
+                  SizedBox(width: 5),
+                  Text(
+                    Locale.rollHint,
+                    style: Theme.of(context).textTheme.headline1.copyWith(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                        ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Picker(),
+            ],
           ),
         ],
       ),

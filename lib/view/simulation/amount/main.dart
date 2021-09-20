@@ -21,10 +21,10 @@ class Amount extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .2,
+          top: MediaQuery.of(context).size.height * .1,
           left: 30,
           right: 30,
-          bottom: 30,
+          bottom: 50,
         ),
         shrinkWrap: true,
         children: [

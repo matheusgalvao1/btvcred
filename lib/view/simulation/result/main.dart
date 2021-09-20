@@ -12,6 +12,7 @@ import '../../../utility/Locale.dart';
 import '../simulator/main.dart';
 
 part 'Contact.dart';
+part 'FabHome.dart';
 part 'InterestValue.dart';
 
 class Result extends StatelessWidget {
@@ -20,12 +21,18 @@ class Result extends StatelessWidget {
     return Consumer<BlocSimulator>(
         builder: (BuildContext context, BlocSimulator bloc) {
       return Scaffold(
-        floatingActionButton: Fab(),
+        floatingActionButton: Row(
+          children: [
+            Fab(),
+            SizedBox(width: 5),
+            FabHome(bloc),
+          ],
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
         body: bloc.loading
             ? Center(child: MyLoading())
             : ListView(
-                padding: EdgeInsets.all(30),
+                padding: EdgeInsets.only(top: 0, bottom: 30, right: 30, left: 30),
                 physics: BouncingScrollPhysics(),
                 children: [
                   Row(
@@ -42,7 +49,7 @@ class Result extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 50),
+                  SizedBox(height: 30),
                   Row(
                     children: [
                       Expanded(
@@ -78,39 +85,6 @@ class Result extends StatelessWidget {
                   //InterestValue(bloc),
                   SizedBox(height: 30),
                   Contact(),
-                  SizedBox(height: 30),
-                  InkWell(
-                    onTap: () => bloc.backHome(),
-                    highlightColor: Colors.transparent,
-                    child: Container(
-                      height: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.home,
-                            size: 35,
-                            color: Theme.of(context).colorScheme.primary,
-                          ),
-                          SizedBox(width: 10),
-                          Text(
-                            Locale.backHome,
-                            style: Theme.of(context)
-                                .textTheme
-                                .headline2
-                                .copyWith(
-                                  fontWeight: FontWeight.w500,
-                                  color: Theme.of(context).colorScheme.primary,
-                                  decoration: TextDecoration.underline,
-                                ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
                 ],
               ),
       );

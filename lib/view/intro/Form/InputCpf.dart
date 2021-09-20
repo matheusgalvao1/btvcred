@@ -15,7 +15,7 @@ class InputCpf extends StatelessWidget {
               Text(
                 Locale.cpf,
                 style: Theme.of(context).textTheme.headline1.copyWith(
-                      fontSize: 25,
+                      fontSize: MediaQuery.of(context).size.width * .07,
                       fontWeight: FontWeight.w600,
                     ),
               ),
@@ -28,7 +28,9 @@ class InputCpf extends StatelessWidget {
             focusNode: bloc.cpfFocus,
             keyboardType: TextInputType.number,
             onSubmitted: (String text) {},
-            style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 30),
+            style: Theme.of(context).textTheme.headline1.copyWith(
+                  fontSize: MediaQuery.of(context).size.width * .07,
+                ),
             decoration: InputDecoration(
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),

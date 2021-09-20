@@ -13,7 +13,7 @@ class _PickerState extends State<Picker> {
       return Column(
         children: [
           Container(
-            height: 300,
+            height: MediaQuery.of(context).size.height*.3,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               border: Border.all(
