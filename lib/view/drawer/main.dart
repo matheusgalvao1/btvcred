@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:community_material_icon/community_material_icon.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../components/Button.dart';
 import '../../components/ButtonOutlined.dart';
@@ -17,33 +18,37 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 50, left: 15, right: 15),
-      child: Column(
+      child: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
-          Image.asset('lib/assets/images/bemtvlogo.png',
-              height: MediaQuery.of(context).size.width * .3),
+          SvgPicture.asset(
+            'lib/assets/images/btv_cont.svg',
+            height: MediaQuery.of(context).size.width * .27,
+          ),
           SizedBox(height: 15),
           Text(
             Locale.btvName,
+            textAlign: TextAlign.center,
             style: Theme.of(context)
                 .textTheme
                 .headline1
                 .copyWith(fontWeight: FontWeight.w600),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 15),
           ButtonOutlined(
             text: Locale.aboutUs,
             onTap: () => ModalAboutUs().show(context),
             height: 60,
             //width: 100,
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           ButtonOutlined(
             text: Locale.location,
             onTap: () => ModalLocation().show(context),
             height: 60,
             //width: 100,
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 10),
           ButtonOutlined(
             text: Locale.termOfUse,
             onTap: () => ModalTermsOfUse().show(context),
