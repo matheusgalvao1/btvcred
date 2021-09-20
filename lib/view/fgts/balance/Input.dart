@@ -17,7 +17,7 @@ class InputAmount extends StatelessWidget {
         onSubmitted: (String text) {
           bloc.validateInput(context);
         },
-        style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 40),
+        style: Theme.of(context).textTheme.headline1.copyWith(fontSize: MediaQuery.of(context).size.width*.08),
         decoration: InputDecoration(
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),

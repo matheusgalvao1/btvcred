@@ -30,12 +30,12 @@ class ModalMilitary {
                         fontWeight: FontWeight.w600,
                       ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 5),
                 Divider(
                   color: Theme.of(context).colorScheme.primary,
                   thickness: 1,
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 7),
                 ButtonOutlined(
                   text: Locale.military1,
                   height: 60,
@@ -46,7 +46,7 @@ class ModalMilitary {
                     blocSimulator.nextPage();
                   },
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 ButtonOutlined(
                   text: Locale.military2,
                   height: 60,
@@ -57,7 +57,7 @@ class ModalMilitary {
                     blocSimulator.nextPage();
                   },
                 ),
-                SizedBox(height: 15),
+                SizedBox(height: 7),
                 ButtonOutlined(
                   text: Locale.military3,
                   height: 60,

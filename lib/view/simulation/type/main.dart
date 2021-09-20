@@ -39,7 +39,7 @@ class Type extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * .1),
+          SizedBox(height: MediaQuery.of(context).size.height * .05),
           MyButton(
             text: Locale.retiredINSS,
             width: 150,

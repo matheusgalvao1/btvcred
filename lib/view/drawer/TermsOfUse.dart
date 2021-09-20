@@ -38,7 +38,7 @@ class TermsOfUse extends StatelessWidget {
         ),
         body: ListView(
           physics: BouncingScrollPhysics(),
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.only(top: 15, left: 30, right: 30, bottom: 30),
           children: [
             Text(config.app.termo, style: Theme.of(context).textTheme.headline2),
           ],

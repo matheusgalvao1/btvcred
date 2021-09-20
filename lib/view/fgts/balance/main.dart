@@ -33,7 +33,7 @@ class Balance extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .05,
+          //top: MediaQuery.of(context).size.height * .05,
           left: 30,
           right: 30,
         ),
@@ -85,7 +85,7 @@ class Balance extends StatelessWidget {
           ),
           SizedBox(height: 15),
           InputAmount(bloc),
-          SizedBox(height: 30),
+          SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
