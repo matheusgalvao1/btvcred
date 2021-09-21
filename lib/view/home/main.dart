@@ -17,27 +17,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     blocUser.init(context);
     return Scaffold(
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () async {
-      //     // CustomBarIcon.showAlert(
-      //     //   title: 'Localização',
-      //     //   message: 'Por favor compartilhe sua localização',
-      //     //   icon: Icon(
-      //     //     Icons.location_pin,
-      //     //     size: 40,
-      //     //     color: Colors.white,
-      //     //   ),
-      //     //   context: context,
-      //     // );
-      //     await blocUser.getCurrentPosition();
-      //     print(blocUser.user.location.toString());
-      //   },
-      // ),
       body: SliderMenuContainer(
         appBarPadding: EdgeInsets.only(top: 30),
         appBarColor: Theme.of(context).colorScheme.background,
         title: null,
         drawerIconColor: Theme.of(context).colorScheme.primary,
+        animationDuration: 500,
         drawerIconSize: 35,
         sliderMain: HomeBody(),
         sliderMenu: MyDrawer(),
