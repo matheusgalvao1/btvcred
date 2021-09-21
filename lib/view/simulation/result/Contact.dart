@@ -22,25 +22,46 @@ class Contact extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 20),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                IconButton(
-                  onPressed: () => bloc.callPhone(),
-                  icon: Icon(
-                    CupertinoIcons.phone,
-                    color: Theme.of(context).colorScheme.primary,
-                    size: 50,
+                InkWell(
+                  onTap: () => bloc.callPhone(),
+                  highlightColor: Colors.transparent,
+                  child: Container(
+                    height: 75,
+                    width: 75,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary,
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        CupertinoIcons.phone_fill,
+                        color: Colors.white,
+                        size: 55,
+                      ),
+                    ),
                   ),
                 ),
-                SizedBox(width: 30),
-                IconButton(
-                  onPressed: () => bloc.sendWhatsApp(context),
-                  icon: Icon(
-                    CommunityMaterialIcons.whatsapp,
-                    color: Theme.of(context).colorScheme.primary,
-                    size: 50,
+                InkWell(
+                  onTap: () => bloc.sendWhatsApp(context),
+                  highlightColor: Colors.transparent,
+                  child: Container(
+                    height: 75,
+                    width: 75,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        CommunityMaterialIcons.whatsapp,
+                        color: Colors.white,
+                        size: 55,
+                      ),
+                    ),
                   ),
                 ),
               ],

@@ -25,7 +25,7 @@ class InputForms extends StatelessWidget {
           Locale.needInfo,
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.headline1.copyWith(
-                fontSize: MediaQuery.of(context).size.width * .08,
+                fontSize: MediaQuery.of(context).size.width * .07,
                 fontWeight: FontWeight.w600,
               ),
         ),

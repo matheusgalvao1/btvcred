@@ -5,6 +5,7 @@ class Modal {
     showModalBottomSheet(
       context: context,
       elevation: 0,
+      isScrollControlled:true,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30),
@@ -35,7 +36,7 @@ class Modal {
                   color: Theme.of(context).colorScheme.primary,
                   thickness: 1,
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.public1,
                   height: 60,
@@ -46,7 +47,7 @@ class Modal {
                     blocSimulator.nextPage();
                   },
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.public2,
                   height: 60,
@@ -57,7 +58,7 @@ class Modal {
                     blocSimulator.nextPage();
                   },
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.public3,
                   height: 60,

@@ -29,7 +29,6 @@ class AboutUs extends StatelessWidget {
           centerTitle: true,
           leading: IconButton(
             onPressed: () => Navigator.pop(context),
-
             icon: Icon(
               CupertinoIcons.left_chevron,
               color: Theme.of(context).colorScheme.primary,

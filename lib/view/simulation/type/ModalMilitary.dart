@@ -5,6 +5,7 @@ class ModalMilitary {
     showModalBottomSheet(
       context: context,
       elevation: 0,
+      isScrollControlled:true,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30),
@@ -35,7 +36,7 @@ class ModalMilitary {
                   color: Theme.of(context).colorScheme.primary,
                   thickness: 1,
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.military1,
                   height: 60,
@@ -46,7 +47,7 @@ class ModalMilitary {
                     blocSimulator.nextPage();
                   },
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.military2,
                   height: 60,
@@ -57,7 +58,7 @@ class ModalMilitary {
                     blocSimulator.nextPage();
                   },
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 15),
                 ButtonOutlined(
                   text: Locale.military3,
                   height: 60,

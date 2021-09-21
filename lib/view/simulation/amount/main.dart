@@ -21,7 +21,7 @@ class Amount extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(
-          top: MediaQuery.of(context).size.height * .1,
+          top: MediaQuery.of(context).size.height * .15,
           left: 30,
           right: 30,
           bottom: 50,
@@ -30,10 +30,10 @@ class Amount extends StatelessWidget {
         children: [
           Text(
             Locale.amount,
-            style: Theme.of(context)
-                .textTheme
-                .headline1
-                .copyWith(fontWeight: FontWeight.w600),
+            style: Theme.of(context).textTheme.headline1.copyWith(
+                  fontWeight: FontWeight.w600,
+                  fontSize: MediaQuery.of(context).size.width*.06,
+                ),
           ),
           SizedBox(height: 15),
           InputAmount(bloc),
@@ -46,7 +46,8 @@ class Amount extends StatelessWidget {
                 width: 150,
                 onTap: () async {
                   bloc.inputFocus.unfocus();
-                  bloc.validateInput(bloc.amountController.numberValue, context);
+                  bloc.validateInput(
+                      bloc.amountController.numberValue, context);
                 },
               ),
             ],

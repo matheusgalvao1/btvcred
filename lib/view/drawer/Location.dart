@@ -4,6 +4,7 @@ class ModalLocation {
   void show(BuildContext context) {
     showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       builder: (BuildContext context) {
         return Location();
       },
@@ -15,6 +16,7 @@ class Location extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 500,
       decoration: BoxDecoration(
         color: Colors.red,
       ),

@@ -32,7 +32,11 @@ class Result extends StatelessWidget {
         body: bloc.loading
             ? Center(child: MyLoading())
             : ListView(
-                padding: EdgeInsets.only(top: 0, bottom: 30, right: 30, left: 30),
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * .07,
+                    bottom: 30,
+                    right: 30,
+                    left: 30),
                 physics: BouncingScrollPhysics(),
                 children: [
                   Row(
@@ -43,13 +47,18 @@ class Result extends StatelessWidget {
                           Locale.result,
                           style: Theme.of(context).textTheme.headline1.copyWith(
                                 fontWeight: FontWeight.w600,
-                                fontSize: 25,
+                                fontSize: 30,
                               ),
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 15),
+                  Divider(
+                    color: Theme.of(context).colorScheme.primary,
+                    thickness: 2,
+                  ),
+                  SizedBox(height: 15),
                   Row(
                     children: [
                       Expanded(
@@ -83,7 +92,12 @@ class Result extends StatelessWidget {
                   ),
                   //SizedBox(height: 10),
                   //InterestValue(bloc),
-                  SizedBox(height: 30),
+                  SizedBox(height: 15),
+                  Divider(
+                    color: Theme.of(context).colorScheme.primary,
+                    thickness: 2,
+                  ),
+                  SizedBox(height: 15),
                   Contact(),
                 ],
               ),

@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         routes: Routes.get(),
         darkTheme: CustomTheme.dark,
         theme: CustomTheme.light,
+        //themeMode: ThemeMode.dark,
         navigatorKey: OneContext().navigator.key,
       ),
       blocs: <Bloc<dynamic>>[
