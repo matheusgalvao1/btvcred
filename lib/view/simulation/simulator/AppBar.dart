@@ -12,11 +12,11 @@ class AppBarSimulator extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
+      leading: SizedBox(),
       bottom: PreferredSize(
         preferredSize: Size.fromHeight(20),
         child: Indicator(),
       ),
-
       elevation: 0,
       //title: Indicator(),
     );

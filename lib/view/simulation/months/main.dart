@@ -19,6 +19,7 @@ class Months extends StatelessWidget {
       floatingActionButton: Fab(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       body: ListView(
+        physics: BouncingScrollPhysics(),
         padding: EdgeInsets.only(top: 0, bottom: 30, right: 30, left: 30),
         children: [
           Column(

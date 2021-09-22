@@ -9,7 +9,7 @@ import '../../../bloc/Simulator.dart';
 class Indicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width - 90;
+    double _width = MediaQuery.of(context).size.width - 60;
     return Consumer<BlocSimulator>(
       builder: (BuildContext context, BlocSimulator bloc) {
         return Padding(
@@ -20,14 +20,14 @@ class Indicator extends StatelessWidget {
               highlightColor: Colors.transparent,
               child: Icon(
                 Icons.close,
-                size: 25,
+                size: 40,
               ),
             ),
-            trailing: SvgPicture.asset(
-              'lib/assets/icons/cash1.svg',
-              color: Theme.of(context).colorScheme.primary,
-              height: 45,
-            ),
+            // trailing: SvgPicture.asset(
+            //   'lib/assets/icons/cash1.svg',
+            //   color: Theme.of(context).colorScheme.primary,
+            //   height: 45,
+            // ),
             width: _width,
             animation: true,
             animateFromLastPercent: true,
