@@ -7,15 +7,22 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import '../../../bloc/Simulator.dart';
 
 class Indicator extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width - 75;
+    double _width = MediaQuery.of(context).size.width - 90;
     return Consumer<BlocSimulator>(
       builder: (BuildContext context, BlocSimulator bloc) {
         return Padding(
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           child: LinearPercentIndicator(
+            leading: InkWell(
+              onTap: () => bloc.backHome(),
+              highlightColor: Colors.transparent,
+              child: Icon(
+                Icons.close,
+                size: 25,
+              ),
+            ),
             trailing: SvgPicture.asset(
               'lib/assets/icons/cash1.svg',
               color: Theme.of(context).colorScheme.primary,
