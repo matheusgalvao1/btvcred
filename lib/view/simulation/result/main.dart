@@ -33,7 +33,7 @@ class Result extends StatelessWidget {
             ? Center(child: MyLoading())
             : ListView(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * .07,
+                    top: MediaQuery.of(context).size.height < 600 ? 0 : MediaQuery.of(context).size.height * .1,
                     bottom: 100,
                     right: 30,
                     left: 30),
