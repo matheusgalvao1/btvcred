@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
         appBarColor: Theme.of(context).colorScheme.background,
         title: null,
         drawerIconColor: Theme.of(context).colorScheme.primary,
-        animationDuration: 500,
+        animationDuration: 400,
         drawerIconSize: 35,
         sliderMain: HomeBody(),
         sliderMenu: MyDrawer(),

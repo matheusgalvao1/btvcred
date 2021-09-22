@@ -19,6 +19,7 @@ dependencies:
   firebase_remote_config: ^0.10.0+3
   flare_splash_screen: ^3.0.1
   flushbar: ^1.10.4
+  flutter_animated_theme: ^1.0.0
   flutter_launcher_icons: ^0.9.0
   flutter_slider_drawer: ^2.0.0
   flutter_svg: ^0.21.0+1

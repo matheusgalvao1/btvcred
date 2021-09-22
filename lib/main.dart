@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:flutter_animated_theme/flutter_animated_theme.dart';
 import 'package:one_context/one_context.dart';
 
 import 'bloc/Contact.dart';
@@ -10,6 +11,7 @@ import 'bloc/FgtsSimulator.dart';
 import 'bloc/Intro.dart';
 import 'bloc/Router.dart';
 import 'bloc/Simulator.dart';
+import 'bloc/Theme.dart';
 import 'bloc/User.dart';
 import 'utility/CustomTheme.dart';
 import 'view/router/main.dart';
@@ -31,14 +33,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      child: MaterialApp(
-        title: 'App Btv',
-        home: Router(),
-        routes: Routes.get(),
-        darkTheme: CustomTheme.dark,
-        theme: CustomTheme.light,
-        //themeMode: ThemeMode.dark,
-        navigatorKey: OneContext().navigator.key,
+      child: Consumer<BlocTheme>(
+        builder: (BuildContext context, BlocTheme bloc) {
+          return AnimatedThemeApp(
+            animationDuration: Duration(milliseconds: 600),
+            animationType: AnimationType.CIRCULAR_ANIMATED_THEME,
+            darkTheme: CustomTheme.dark,
+            home: Router(),
+            navigatorKey: OneContext().navigator.key,
+            routes: Routes.get(),
+            theme: CustomTheme.light,
+            themeMode: bloc.mode,
+            title: 'App Btv',
+          );
+        }
       ),
       blocs: <Bloc<dynamic>>[
         Bloc<BlocContact>((dynamic i) => BlocContact()),
@@ -46,9 +54,9 @@ class MyApp extends StatelessWidget {
         Bloc<BlocIntro>((dynamic i) => BlocIntro()),
         Bloc<BlocRouter>((dynamic i) => BlocRouter()),
         Bloc<BlocSimulator>((dynamic i) => BlocSimulator()),
+        Bloc<BlocTheme>((dynamic i) => BlocTheme()),
         Bloc<BlocUser>((dynamic i) => BlocUser()),
       ],
-      
       dependencies: [],
     );
   }
