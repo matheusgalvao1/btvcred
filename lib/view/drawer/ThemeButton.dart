@@ -20,7 +20,9 @@ class _ThemeButtonState extends State<ThemeButton>
           child: Icon(
             Icons.light_mode_rounded,
             size: 40,
-            color: !blocTheme.themeDark ? Theme.of(context).colorScheme.primary : null,
+            color: !blocTheme.themeDark
+                ? Theme.of(context).colorScheme.primary
+                : null,
           ),
         ),
         SizedBox(width: 30),
@@ -32,7 +34,9 @@ class _ThemeButtonState extends State<ThemeButton>
           child: Icon(
             Icons.dark_mode_rounded,
             size: 40,
-            color: blocTheme.themeDark ? Theme.of(context).colorScheme.primary : null,
+            color: blocTheme.themeDark
+                ? Theme.of(context).colorScheme.primary
+                : null,
           ),
         ),
       ],

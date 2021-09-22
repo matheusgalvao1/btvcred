@@ -36,14 +36,14 @@ class MyApp extends StatelessWidget {
       child: Consumer<BlocTheme>(
         builder: (BuildContext context, BlocTheme bloc) {
           return AnimatedThemeApp(
-            animationDuration: Duration(milliseconds: 600),
+            animationDuration: Duration(milliseconds: 200),
             animationType: AnimationType.CIRCULAR_ANIMATED_THEME,
             darkTheme: CustomTheme.dark,
             home: Router(),
             navigatorKey: OneContext().navigator.key,
             routes: Routes.get(),
             theme: CustomTheme.light,
-            themeMode: bloc.mode,
+            themeMode: bloc.mode != null ? bloc.mode : ThemeMode.dark,
             title: 'App Btv',
           );
         }

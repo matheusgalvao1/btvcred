@@ -6,10 +6,10 @@ class BlocTheme extends BlocBase {
   bool themeDark = true;
   ThemeMode mode = ThemeMode.dark;
 
-  void setThemeDark(bool value) {
+  setThemeDark(bool value) {
     if (themeDark != value) {
       themeDark = value;
-      if(mode == ThemeMode.dark)
+      if (mode == ThemeMode.dark)
         mode = ThemeMode.light;
       else
         mode = ThemeMode.dark;
