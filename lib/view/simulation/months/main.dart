@@ -9,6 +9,7 @@ import '../../../components/Button.dart';
 import '../../../utility/Locale.dart';
 import '../simulator/main.dart';
 
+part 'BestOffer.dart';
 part 'Picker.dart';
 
 class Months extends StatelessWidget {

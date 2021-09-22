@@ -113,7 +113,7 @@ class Locale {
 
       // Infos
       btvName = 'BEM-TE-VI CRED',
-      bestOffer = 'Melhor\noferta',
+      bestOffer = 'Melhor\nOferta',
       whatsApp = 'WhatsApp',
       call = 'Ligação';
 
