@@ -49,10 +49,23 @@ class Term extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.symmetric(horizontal: 15),
             child: Center(
-              child: MyButton(
-                text: Locale.agree,
-                height: 60,
-                onTap: () => bloc.agree(),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: MyButton(
+                  text: Locale.agree,
+                  height: 60,
+                  onTap: () => bloc.agree(),
+                ),
               ),
             ),
           ),

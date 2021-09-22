@@ -34,7 +34,7 @@ class Result extends StatelessWidget {
             : ListView(
                 padding: EdgeInsets.only(
                     top: MediaQuery.of(context).size.height * .07,
-                    bottom: 30,
+                    bottom: 100,
                     right: 30,
                     left: 30),
                 physics: BouncingScrollPhysics(),

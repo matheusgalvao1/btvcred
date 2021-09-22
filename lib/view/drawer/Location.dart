@@ -17,9 +17,6 @@ class Location extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
-      decoration: BoxDecoration(
-        color: Colors.red,
-      ),
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent,
