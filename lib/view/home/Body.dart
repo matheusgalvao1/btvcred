@@ -34,15 +34,15 @@ class HomeBody extends StatelessWidget {
               Navigator.pushNamed(context, '/simulator');
             },
           ),
-          SizedBox(height: 20),
-          config.app.showFGTS
-              ? MyButton(
-                  text: Locale.fgts,
-                  width: 150,
-                  height: 60,
-                  onTap: () => Navigator.pushNamed(context, '/fgts'),
-                )
-              : SizedBox(),
+          // SizedBox(height: 20),
+          // config.app.showFGTS
+          //     ? MyButton(
+          //         text: Locale.fgts,
+          //         width: 150,
+          //         height: 60,
+          //         onTap: () => Navigator.pushNamed(context, '/fgts'),
+          //       )
+          //     : SizedBox(),
         ],
       ),
     );

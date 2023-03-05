@@ -1,55 +1,43 @@
 {
-    "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false,
-        "**/.DS_Store": false,
-        "**/Thumbs.db": true,
-        "**/.metadata": false,
-        ".metadata": true,
-        "**/test": false,
-        "test": true,
-        "**/web": false,
-        "web": true,
-        "**/ios": false,
-        "ios": true,
-        "**/build": false,
-        "build": true,
-        "**/android": false,
-        "android": true,
-        "**/.vscode": false,
-        ".vscode": true,
-        "**/.idea": false,
-        ".idea": true,
-        "**/.dart_tool": false,
-        ".dart_tool": true,
-        "**/pubspec.lock": false,
-        "*.lock": false,
-        "pubspec.lock": false,
-        "**/*.lock": false,
-        "**/btvcred.iml": false,
-        "*.iml": false,
-        "btvcred.iml": true,
-        "**/*.iml": false,
-        "**/.packages": false,
-        ".packages": true,
-        "**/.gitignore": false,
-        ".gitignore": true,
-        "**/.flutter-plugins-dependencies": false,
-        ".flutter-plugins-dependencies": true,
-        "**/.flutter-plugins": false,
-        ".flutter-plugins": true,
-        "lib/generated_plugin_registrant.dart": true,
-        "**/generated_plugin_registrant.dart": false,
-        "lib/*.dart": false,
-        "lib/*.*": false,
-        "generated_plugin_registrant.dart": true,
-        "**/*.dart": false,
-        "components": false,
-        "lib/components": false,
-        ".git": true,
-        "README.md": true
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    // Remove .fvm files from search
+    "search.exclude": {
+      "**/.fvm": true
     },
-    "explorerExclude.backup": null
-}
+    // Remove from file watching
+    "files.watcherExclude": {
+      "**/.fvm": true
+    },
+    "dart.flutterSdkPaths": [
+      "/Users/$USER/fvm/versions/stable",
+      "/Users/$USER/fvm/versions/dev"
+    ],
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "web": true,
+      ".metadata": true,
+      ".packages": true,
+      "pubspec.lock": true,
+      ".flutter-plugins-dependencies": true,
+      ".flutter-plugins": true,
+      "test": true,
+      "ios": true,
+      ".dart_tool": true
+    },
+    "hide-files.files": [
+      "web",
+      ".metadata",
+      ".packages",
+      "pubspec.lock",
+      ".flutter-plugins-dependencies",
+      ".flutter-plugins",
+      "test",
+      "ios",
+      ".dart_tool"
+    ]
+  }
